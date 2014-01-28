@@ -50,7 +50,8 @@
 			<?php if (isset($_GET["administrator"])): ?>
 				Administrator:
 			<?php endif; ?>
-			Aplicación con patrón MVC</h1>
+			EJERCICIO TABLE CRUD</h1>
+                        <h2>Jorge Rodríguez Sanz</h2>
 		</div>
 		
 		<div id="div_derecha_logo">
@@ -79,23 +80,10 @@
 				<legend>Menú - Índice - Barra de navegación:</legend>
 					<ul id="menu" class="menu">
 <!--						<li class="item"><a href="<?php //echo \core\URL::generar(); ?>" title="Inicio">Inicio</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("inicio"), "Inicio"); ?>
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("revista"); ?>" title="Revista">Revista</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("revista"), "Revista"); ?>
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("libros"); ?>" title="Libros leídos">Libros</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("libros"), "Libros"); ?>
-						
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("inicio/internacional"); ?>" title="Internacional">Internacional</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("inicio", "internacional"), "Internacional"); ?>
-						
-						
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("usuarios"); ?>" title="Usuarios">Usuarios</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("usuarios"), "Usuarios"); ?>
+						<?php echo \core\HTML_Tag::li_menu("item", array("inicio"), "Inicio"); ?>						
 <!--						<li class="item"><a href="<?php //echo \core\URL::generar("categorias"); ?>" title="Categorías">Categorías</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("categorias"), "Categorias"); ?>
-						
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("articulos"); ?>" title="Artículos">Artículos</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("articulos"), "Artículos"); ?>
+						<?php echo \core\HTML_Tag::li_menu("item", array("elementos"), "Tabla"); ?>
+
 					</ul>
 			</fieldset>
 		</div>
@@ -112,8 +100,8 @@
 		<div id="pie">
 			
 			Pie del documento.<br />
-			Documento creado por Jesús María de Quevedo Tomé. <a href="mailto:jequeto@gmail.com">Contactar</a><br />
-			Fecha última actualización: 15 de diciembre de 2013.
+			Documento creado por Jorge Rodríguez Sanz. <a href="mailto:jergo23@gmail.com">Contactar</a><br />
+			Fecha última actualización: 28 de enero de 2014.
 		</div>
 		
 		<?php echo \core\HTML_Tag::post_request_form(); ?>

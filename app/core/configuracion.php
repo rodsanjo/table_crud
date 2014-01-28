@@ -16,7 +16,7 @@ class Configuracion {
 	public static $url_amigable = true;
 	
 	// Control acceso a recursos
-	public static $control_acceso_recursos = true;
+	public static $control_acceso_recursos = false;
 	
 	public static $display_errors = "on"; // Valores posibles "on" "off""
 
@@ -51,7 +51,7 @@ class Configuracion {
 		'server'   => 'localhost',
 		'user'     => 'daw2_user',
 		'password' => 'daw2_user',
-		'db_name'  => 'daw2',
+		'db_name'  => 'rodsanjo',
 		'prefix_'  => 'daw2_'
 	);
 	
