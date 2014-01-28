@@ -65,6 +65,7 @@ class Rutas {
 					$_REQUEST["lang"] = strtolower($parametros[0]);
 					array_shift($parametros); // Quitamos del array de encuentros el idioma
 				}
+                                
 			}
 			
 			$patron[0] = "/^[\w\-]+$/i"; // controlador
@@ -75,8 +76,11 @@ class Rutas {
 				// Si el parámetro se ha recibido no se añade
 				// Si lo añado, quito la / del inicio.
 				$patron_parametro = $key < 3 ? $patron[$key] : $patron[3];
-				if (preg_match($patron_parametro, $value))
-					if ( ! isset($_GET["p".($key+1)]) ) $_GET["p".($key+1)] = $value;
+				if (preg_match($patron_parametro, $value))                                    
+                                    if ( ! isset($_GET["p".($key+1)]) ) {
+                                        $_GET["p".($key+1)] = $value;
+                                        $_REQUEST["p".($key+1)] = $value;
+                                   }
 			}
 			
 		}

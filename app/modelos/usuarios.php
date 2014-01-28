@@ -121,7 +121,11 @@ class usuarios extends \modelos\Modelo_SQL {
 	 * @return array Array con los permisos de la forma permisos[controlador][metodo]=true para cada permiso recuperado
 	 */
 	public static function permisos_usuario($login) {
-		
+
+                if ( ! \core\Configuracion::$control_acceso_recursos) {
+			return array();
+		}
+
 		$consulta = "
 			select distinct controlador , metodo
 			from ".self::get_prefix_tabla('usuarios_permisos')."

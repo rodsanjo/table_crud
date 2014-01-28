@@ -40,7 +40,8 @@ class Autoloader {
 			return;
 		}
 		// Sustituir las \ que separan el namespaces del nombre de la clase por DS que separa carpetas
-		$class_name = str_replace(array("\\", ), array(DS , ), $class_name);
+		//$class_name = str_replace(array("\\", ), array(DS , ), $class_name);  //Antiguo
+                $class_name = str_replace(array("\\"), array(DS), $class_name);
 		
 		$fichero_clase = strtolower(PATH_APP.$class_name.".php");
 		

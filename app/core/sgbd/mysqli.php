@@ -327,12 +327,21 @@ class mysqli implements \core\sgbd\SQL_interface {
 	
 	
 
-	
+	/**
+	 * Borra filas.
+	 * Tiene prioridad la existencia de valor en el parÃ¡metro $where, depuÃ©s la entrada $clausulas[where], y por Ãºltimo $clausulas[id].
+	 * 
+	 * @param array $clausulas default array() Ejemplos: array("id"=>3), array("where" => " rol = 'usuarios' ")
+	 * @param atring $table default null
+	 * @param string $where default null Ejemplo: " rol = 'usuarios' "
+	 * @return type
+	 * @throws \Exception
+	 */
 	public static function delete( $clausulas = array(), $table = null, $where = null) {
-		
-		if ( ! isset($clausulas['id']) && ! strlen($where))
-			throw new \Exception(__METHOD__." Error: debe aportarse la id or \$where.");
-		
+				
+		if ( ! isset($clausulas['id']) && ! isset($clausulas['where']) && ! strlen($where))
+			throw new \Exception(__METHOD__." Error: debe aportarse las entradas [id] o [where] en \$clausulas o el parÃ¡metro \$where.");		
+
 		
 		if (is_string($clausulas) and is_array($table)) {
 			// Vienen cambiados y los intercambiamos
@@ -433,9 +442,8 @@ class mysqli implements \core\sgbd\SQL_interface {
 		$sql = "
 			start transaction;
 		";
-		
-		return execute($sql);
-		
+				
+		return self::execute($sql);
 	}
 	
 	
@@ -445,8 +453,8 @@ class mysqli implements \core\sgbd\SQL_interface {
 		$sql = "
 			commit;
 		";
-		
-		return execute($sql);
+				
+                return self::execute($sql);
 		
 	}
 	
@@ -458,7 +466,7 @@ class mysqli implements \core\sgbd\SQL_interface {
 			rollback;
 		";
 		
-		return execute($sql);
+                return self::execute($sql);
 		
 	}
 	
