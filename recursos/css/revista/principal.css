@@ -1,0 +1,76 @@
+/* 
+    Document   : principal
+    Created on : 25-sep-2013, 16:21:08
+    Author     : jesus
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+h1#titulo {
+	display: inline;
+}
+
+hr {
+	height: 5px;
+	background-color: lightgreen;
+}
+
+
+div#div_menu {
+	background-color: lightblue;
+}
+
+div#div_menu fieldset {
+	padding: 0px 0px 5px 0px;
+}
+
+div#div_menu fieldset legend {
+	color: blue;
+}
+
+ul#menu {
+	margin: 0px;
+	padding: 5px;
+	list-style: none;
+	color: white;
+}
+
+ul#menu li.item {
+	float: left;
+	border: 1px solid green;
+	background-color: lightgreen;
+	padding: 5px;
+	margin: 0px 0px;
+	background-color: blue;
+
+}
+
+ul#menu li.item:hover {
+	position: relative;
+	z-index: 1;
+	border: 1px yellow solid;
+	outline: yellow dotted thick;
+}
+
+ul#menu li.item a {
+	text-decoration: none;
+	color: white;
+
+}
+
+ul#menu li.item a:visited {
+	text-decoration: none;
+}
+
+ul#menu li.item a:hover {
+	color: yellow;
+}
+
+ul#menu li.item a:active {
+	color: orange;
+	background-color: #FF704D;
+}

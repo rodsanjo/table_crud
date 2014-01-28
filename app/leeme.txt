@@ -1,0 +1,25 @@
+Carpeta .../app/
+En esta carpeta se almacenarán todos los ficheros que componen la aplicación 
+escrita en php POO.
+
+Cada clase se guardará en un fichero con el nombre de la clase en minúsculas y
+extensión php.
+Los ficheros se guardarán en subcarpetas dentro de esta carpeta. El nombre de la
+subcarpeta conicidirá con el nombre del namespace con el que se definirá la clase.
+
+
+Propuesta de subcarpetas:
+
+./core/		guardará las clases base sobre las que se apoya este framework php
+	En otros frameworks existe la carpeta ./helpers/, pero para disminuir la complejidad
+	aquí se propone guardar todas las clases de ayuda en la carpeta ./core
+
+./controladores/		guardará las clases de cada controlador
+./modelos/	guardará las clases que sirvan para definir colecciones de datos o 
+	para acceder a tablas y vistas en SGBD
+./vistas/	contendrá los ficheros con las plantillas utilizadas para generar
+	los documentos enviados al clientes y vistas de cada uno de los controladores,
+	éstas incluidas en carpetas con el mismo nombre que el controlador.
+
+./lib/	se guardarán los ficheros php de terceros que vayan a ser reutilizados
+	 en esta aplicación.

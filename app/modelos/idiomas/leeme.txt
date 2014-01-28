@@ -1,0 +1,33 @@
+La carpeta .../app/modelos/idiomas
+
+almacenará los ficheros conteniendo los textos estáticos de la aplicación en cada idioma.
+Los textos dinámicos deben almacenarse en un sistema de base de datos.
+
+Nombre de los ficheros: seccion_idioma.txt
+Ejemplo: plantilla_es.txt
+
+Estructura de los ficheros de texto:
+clave|texto
+title|Internacional
+h1#|Página internacional
+Autor|Autor
+Nombre|
+Apellidos|
+Fecha Creación|Fecha Creación
+Fecha última modificacion|Fecha última Modificacion
+
+Clave contendrá un valor único para cada fichero, y podrá ser una texto en castellano, inglés, o una referencia a un elemento html de la página donde se ubicaría el texto.
+El texto estará asociado a la clave. Si una clave no tiene texto, se supone que es el mismo que la clave.
+
+En cada sección, los ficheros principales son los que acaban en *_es.txt
+Los ficheros en otros idiomas deberán contener todas las claves que contenga el fichero homónimo acabado en _es.txt, y el texto será la traducción del texto a dicho idioma o de la clave cuando el fichero _es.txt no tuviera texto asociado a la clave
+Ejemplo: plantilla_en.txt
+clave|texto
+title|International
+h1#|International Sheet
+Autor|Author
+Nombre|First Name
+Apellidos|Last Name
+Fecha Creación|Creation date
+Fecha última modificacion|Last Update Date
+

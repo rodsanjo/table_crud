@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule .* -f [L]
+
+RewriteCond %{REQUEST_URI} (.+)/(.+\/?)*
+RewriteRule .* %1/index.php [R,QSA]

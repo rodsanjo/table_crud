@@ -1,0 +1,125 @@
+/* 
+    Document   : principal
+    Created on : 25-sep-2013, 16:21:08
+    Author     : jesus
+    Description:  Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+h1#titulo {
+	display: inline;
+}
+
+
+
+
+div#div_derecha_logo {
+	position: absolute;
+	float: right;
+	width: 300px;
+	padding: 2px;
+	border: 2px solid grey;
+	top: 5px;
+	right: 5px;
+	background-color: yellow;
+}
+
+div#div_menu {
+	padding: 5px;
+	background-color: lightblue;
+}
+
+div#div_menu fieldset {
+	
+	padding: 0px 0px 5px 0px;
+}
+
+div#div_menu fieldset legend {
+	
+	color: blue;
+}
+
+ul#menu {
+	margin: 0px;
+	padding: 5px;
+	list-style: none;
+	color: white;
+}
+
+ul#menu li.item {
+	float: left;
+	border: 1px solid green;
+	background-color: lightgreen;
+	padding: 5px;
+	margin: 0px 0px;
+	background-color: blue;
+
+}
+
+ul#menu li.item:hover {
+	position: relative;
+	z-index: 1;
+	border: 1px yellow solid;
+	outline: yellow dotted thick;
+}
+
+ul#menu li.item a {
+	text-decoration: none;
+	color: white;
+
+}
+
+ul#menu li.item a:visited {
+	text-decoration: none;
+}
+
+ul#menu li.item a:hover {
+	color: yellow;
+}
+
+ul#menu li.item a:active {
+	color: orange;
+	background-color: #FF704D;
+}
+
+form {
+	margin: 5px;
+	border: 3px solid lightgrey;
+	padding: 5px;
+	background-color: lightblue;
+}
+
+.requerido {
+	
+	color: orange;
+}
+
+
+div#pie {
+	outline: 5px solid lightblue;
+	margin: 10px 5px;
+	border: 3px solid lightgrey;
+	background-color: lightblue;
+	padding: 5px;
+}
+
+.boton {
+	margin: 5px 5px;
+	padding: 2px;
+	line-height: 170%;
+	background-color: lightgray;
+	border: 1px solid black;
+	text-decoration: none;
+}
+
+table {
+	border: 3px solid black;
+	border-collapse: collapse;
+}
+
+table td, table th {
+	padding: 5px;
+}

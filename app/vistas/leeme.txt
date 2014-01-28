@@ -1,0 +1,15 @@
+En la carpeta vistas existirá una carpeta por cada controlador existente
+en la carpeta controladores con el mismo nombre que cada controlador.
+
+Dentro de la subcarpeta con el nombre de un controlador se encontrarán 
+ficheros.php conteniendo vistas que serán utilizadas por los métodos del
+controlador
+
+Colgando de la carpeta vistas estarán los ficheros con las plantillas que utilizará
+la aplicación. Las plantillas son esqueletos html en los que se incorporará el contenido
+html generado por las vistas.
+
+¿Dónde se guardará el css y el js de una vista?
+Se guardará dentro de la subcarpeta 
+.../recursos/css/nombre_controlador/ y en
+.../recursos/js/nombre_controlador/
