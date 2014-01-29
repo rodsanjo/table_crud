@@ -4,7 +4,7 @@
  * @since: 2014 enero
 */
 
--- use daw2;
+-- use rodsanjo;
 
 set names utf8;
 set sql_mode = 'traditional';

@@ -34,8 +34,8 @@ create table if not exists daw2_elementos
 , numero_atomico integer
 , masa_atomica decimal(10,5) default null
 , tipo_id integer unsigned
-, fecha_adquisicion timestamp not null default now()
-, fecha_devolucion date
+, fecha_adquisicion timestamp default current_timestamp()
+, fecha_devolucion date default now()
 , primary key(id)
 , unique(nombre)
 , unique(simbolo_quimico)
