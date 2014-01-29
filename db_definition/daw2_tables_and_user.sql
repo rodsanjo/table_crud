@@ -20,6 +20,7 @@ set sql_mode = 'traditional';
 drop table if exists daw2_tipos;
 drop table if exists daw2_elementos;
 
+drop table if exists daw2_tipos;
 create table daw2_tipos
 (id integer unsigned primary key
 ,tipo varchar(30) not null unique
@@ -27,15 +28,16 @@ create table daw2_tipos
 engine=myisam
 ;
 
+drop table if exists daw2_elementos;
 create table if not exists daw2_elementos
 ( id integer auto_increment
 , nombre varchar(100) not null
 , simbolo_quimico varchar(3) not null unique
 , numero_atomico integer
-, masa_atomica decimal(10,5) default null
+, masa_atomica decimal(10,3) default null
 , tipo_id integer unsigned
-, fecha_adquisicion timestamp default current_timestamp()
-, fecha_devolucion date default now()
+, fecha_adquisicion timestamp default now()
+, fecha_devolucion date /*Solo admite un current_timestamp() por tabla - Error Code: 1293. Incorrect table definition; there can be only one TIMESTAMP column with CURRENT_TIMESTAMP in DEFAULT or ON UPDATE clause   */
 , primary key(id)
 , unique(nombre)
 , unique(simbolo_quimico)

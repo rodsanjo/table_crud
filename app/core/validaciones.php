@@ -318,6 +318,25 @@ class Validaciones  {
 		}
 		return $mensaje ;		
 	}
+        
+        /**
+	 * Valida para un número real usando "," como separador decimal.
+	 * Ejemplo 21.01526 12.
+	 * 
+	 * @param string $cadena
+	 * @return boolean|string
+	 */
+	public static function errores_decimal($cadena=null) {
+		
+		$mensaje = null; // Optimista
+		
+		if ( ! is_null($cadena) && strlen($cadena)) {
+			$patron="/^(\d{0,})((\.\d{0,}){0,1})$/i";
+			if( ! preg_match($patron, $cadena))
+				$mensaje ='-php- Error: El número debe escribirse usando "," como separador decimal y sin separador de miles';
+		}
+		return $mensaje ;		
+	}
 
 	
 	
@@ -345,10 +364,22 @@ class Validaciones  {
 		if ($mensaje=="") $mensaje=false;
 		return $mensaje;
 	}
+        
+        public static function errores_fecha_formato_mysql($cadena){
+		$mensaje="";
+		if ($cadena!=null) {
+			$cadena=str_replace(array(' ', '-', '.', ',', ':'), '/', $cadena);
+			/* Para que sea mas facil y ahorrar comprobaciones cambiamos por / todos los signos que pone en el array, de esta manera la fecha siempre sera del tipo dd/mm/aaaa */
+			$patron_fecha_mysql="/^\d{4}\/\d{1,2}\/\d{1,2}/";			
+			if (! preg_match($patron_fecha_mysql, $cadena)) {
+                            $mensaje="La fecha es errónea. Revísela. ";
+                        }                        
+                }
+		if ($mensaje=="") $mensaje=false;
+		return $mensaje;
+	}
 
 	
-	
-
 	/**
 	 * Identificador de variables o de claves internas. Solo letras, números y _. NO puede empezar por número
 	 * 
