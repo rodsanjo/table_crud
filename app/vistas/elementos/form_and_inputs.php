@@ -25,7 +25,7 @@
 	<?php echo \core\HTML_Tag::span_error('fecha_entrada', $datos); ?>
 	<br />
         
-        Fecha de salida: <input id='fecha_salida' name='fecha_salida' type='date' value='<?php echo \core\Array_Datos::values('fecha_salida', $datos); ?>'/>
+        Fecha de salida: <input id='fecha_salida' name='fecha_salida' type='date' maxlength='10' value='<?php echo \core\Array_Datos::values('fecha_salida', $datos); ?>'/>
 	<?php echo \core\HTML_Tag::span_error('fecha_salida', $datos); ?>
 	<br />
         

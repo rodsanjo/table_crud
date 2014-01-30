@@ -333,7 +333,7 @@ class Validaciones  {
 		if ( ! is_null($cadena) && strlen($cadena)) {
 			$patron="/^(\d{0,})((\.\d{0,}){0,1})$/i";
 			if( ! preg_match($patron, $cadena))
-				$mensaje ='-php- Error: El número debe escribirse usando "," como separador decimal y sin separador de miles';
+				$mensaje ='-php- Error: El número debe escribirse usando "." como separador decimal y sin separador de miles';
 		}
 		return $mensaje ;		
 	}
@@ -365,15 +365,20 @@ class Validaciones  {
 		return $mensaje;
 	}
         
-        public static function errores_fecha_formato_mysql($cadena){
-		$mensaje="";
+        /**
+	 * Cadena representa una fecha valida en España, con el formato dd/mm/aaaa
+	 * @param type $cadena
+	 * @return boolean
+	 */
+        public static function errores_fecha($cadena){            
+		$mensaje="";                             
 		if ($cadena!=null) {
-			$cadena=str_replace(array(' ', '-', '.', ',', ':'), '/', $cadena);
-			/* Para que sea mas facil y ahorrar comprobaciones cambiamos por / todos los signos que pone en el array, de esta manera la fecha siempre sera del tipo dd/mm/aaaa */
-			$patron_fecha_mysql="/^\d{4}\/\d{1,2}\/\d{1,2}/";			
-			if (! preg_match($patron_fecha_mysql, $cadena)) {
-                            $mensaje="La fecha es errónea. Revísela. ";
-                        }                        
+                    $cadena=str_replace(array(' ', '/', '.', ',', ':'), '-', $cadena);
+                    /* Para que sea mas facil y ahorrar comprobaciones cambiamos por "-" todos los signos que pone en el array, de esta manera la fecha siempre sera del tipo dd/mm/aaaa */
+                    $patron_fecha="/^\d{1,2}\-\d{1,2}\-\d{4}/$";
+                    if (! preg_match($patron_fecha, $cadena)) {                            
+                        $mensaje="La fecha es errónea. Revísela, por favor.";
+                    }
                 }
 		if ($mensaje=="") $mensaje=false;
 		return $mensaje;
