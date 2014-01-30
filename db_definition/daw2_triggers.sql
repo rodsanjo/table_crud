@@ -6,19 +6,19 @@
 
 -- use rodsanjo;
 
-drop trigger if exists daw2_t_add_7anhos_f_devolucion_de_elementos_ai;
+drop trigger if exists daw2_t_add_7anhos_f_salida_de_elementos_ai;
 
 delimiter // /*No funciona*/
-create trigger daw2_t_add_7anhos_f_devolucion_de_elementos_ai
+create trigger daw2_t_add_7anhos_f_salida_de_elementos_ai
 after insert on daw2_elementos for each row
 begin
-	declare _fecha_devolucion date;
-	select fecha_devolucion into _fecha_devolucion
+	declare _fecha_salida date;
+	select fecha_salida into _fecha_salida
 	from daw2_elementos
 	where id = (SELECT LAST_INSERT_ID());
-	if( isnull(_fecha_devolucion)) then 
+	if( isnull(_fecha_salida)) then 
 		update daw2_elementos
-		set fecha_devolucion = now()
+		set fecha_salida = now()
 		where id = (SELECT LAST_INSERT_ID()) ;
 	end if;
 end;

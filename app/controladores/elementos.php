@@ -40,8 +40,8 @@ class Elementos extends \core\Controlador {
                     , "numero_atomico" => "errores_numero_entero_positivo"
                     , "masa_atomica" => "errores_decimal"
                     //, "tipo_id" => "errores_numero_entero_positivo"
-                    , "fecha_adquisicion" => "errores_fecha_hora"
-                    , "fecha_devolucion" => "errores_fecha_formato_mysql"
+                    , "fecha_entrada" => "errores_fecha_hora"
+                    , "fecha_salida" => "errores_fecha_formato_mysql"
 		);                
                 
 		if ( ! $validacion = ! \core\Validaciones::errores_validacion_request($validaciones, $datos)){
@@ -111,8 +111,8 @@ class Elementos extends \core\Controlador {
                     , "numero_atomico" => "errores_numero_entero_positivo"
                     , "masa_atomica" => "errores_decimal"
                     //, "tipo_id" => "errores_numero_entero_positivo"
-                    , "fecha_adquisicion" => "errores_fecha_hora"
-                    , "fecha_devolucion" => "errores_fecha_formato_mysql"
+                    , "fecha_entrada" => "errores_fecha_hora"
+                    , "fecha_salida" => "errores_fecha_formato_mysql"
 		);
                 
 		if ( ! $validacion = ! \core\Validaciones::errores_validacion_request($validaciones, $datos)) {

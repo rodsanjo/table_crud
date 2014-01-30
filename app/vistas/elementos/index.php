@@ -30,8 +30,8 @@
                         <td>{$fila['simbolo_quimico']}</td>
                         <td>{$fila['numero_atomico']}</td>
                         <td>{$fila['masa_atomica']}</td>
-                        <td>{$fila['fecha_adquisicion']}</td>
-                        <td>{$fila['fecha_devolucion']}</td>
+                        <td>{$fila['fecha_entrada']}</td>
+                        <td>{$fila['fecha_salida']}</td>
                         <td>
                     ".\core\HTML_Tag::a_boton("boton", array("elementos", "form_modificar", $fila['id']), "modificar")
                     //<a class='boton' href='?menu={$datos['controlador_clase']}&submenu=form_modificar&id={$fila['id']}' >modificar</a>

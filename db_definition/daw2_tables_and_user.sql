@@ -36,8 +36,8 @@ create table if not exists daw2_elementos
 , numero_atomico integer
 , masa_atomica decimal(10,3) default null
 , tipo_id integer unsigned
-, fecha_adquisicion timestamp default now()
-, fecha_devolucion date /*Solo admite un current_timestamp() por tabla - Error Code: 1293. Incorrect table definition; there can be only one TIMESTAMP column with CURRENT_TIMESTAMP in DEFAULT or ON UPDATE clause   */
+, fecha_entrada timestamp default now()
+, fecha_salida date /*Solo admite un current_timestamp() por tabla - Error Code: 1293. Incorrect table definition; there can be only one TIMESTAMP column with CURRENT_TIMESTAMP in DEFAULT or ON UPDATE clause   */
 , primary key(id)
 , unique(nombre)
 , unique(simbolo_quimico)

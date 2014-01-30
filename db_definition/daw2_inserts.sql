@@ -24,7 +24,7 @@ insert into daw2_tipos values
 ;
 
 insert into daw2_elementos
- (nombre, simbolo_quimico, numero_atomico, masa_atomica, tipo_id, fecha_adquisicion, fecha_devolucion) values
+ (nombre, simbolo_quimico, numero_atomico, masa_atomica, tipo_id, fecha_entrada, fecha_salida) values
  ('Oxigeno', 'O', 2, 15.9994, 7,'1994-10-15', null)
 ,('Hidrogeno', 'H', 1, 1.00794, 7,'1994-10-10', null)
 ,('Hierro', 'Fe', 26, 55.845, 3,'1996-04-20', '2016-11-05')

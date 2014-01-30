@@ -6,7 +6,7 @@
 		window.document.getElementById("simbolo_quimico").readOnly='readonly';
                 window.document.getElementById("numero_atomico").readOnly='readonly';
                 window.document.getElementById("masa_atomica").readOnly='readonly';
-                window.document.getElementById("fecha_adquisicion").readOnly='readonly';
-                window.document.getElementById("fecha_adquisicion").readOnly='readonly';
+                window.document.getElementById("fecha_entrada").readOnly='readonly';
+                window.document.getElementById("fecha_salida").readOnly='readonly';
 	</script>
 </div>

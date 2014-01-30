@@ -21,12 +21,12 @@
 	<?php echo \core\HTML_Tag::span_error('masa_atomica', $datos); ?>
 	<br />
         
-        Fecha de adquisición: <input id='fecha_adquisicion' name='fecha_adquisicion' type='text' size='15'  maxlength='dd/mm/aaaa' value='<?php echo \core\Array_Datos::values('fecha_adquisicion', $datos); ?>'/>
-	<?php echo \core\HTML_Tag::span_error('fecha_adquisicion', $datos); ?>
+        Fecha de entrada: <input id='fecha_entrada' name='fecha_entrada' type='text' size='15'  maxlength='dd/mm/aaaa' value='<?php echo \core\Array_Datos::values('fecha_entrada', $datos); ?>'/>
+	<?php echo \core\HTML_Tag::span_error('fecha_entrada', $datos); ?>
 	<br />
         
-        Fecha de devolución: <input id='fecha_devolucion' name='fecha_devolucion' type='date' value='<?php echo \core\Array_Datos::values('fecha_devolucion', $datos); ?>'/>
-	<?php echo \core\HTML_Tag::span_error('fecha_devolucion', $datos); ?>
+        Fecha de salida: <input id='fecha_salida' name='fecha_salida' type='date' value='<?php echo \core\Array_Datos::values('fecha_salida', $datos); ?>'/>
+	<?php echo \core\HTML_Tag::span_error('fecha_salida', $datos); ?>
 	<br />
         
 	<br />
