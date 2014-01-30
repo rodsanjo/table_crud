@@ -320,7 +320,7 @@ class Validaciones  {
 	}
         
         /**
-	 * Valida para un número real usando "," como separador decimal.
+	 * Valida para un número real usando "," o "." como separador decimal.
 	 * Ejemplo 21.01526 12.
 	 * 
 	 * @param string $cadena
@@ -331,9 +331,9 @@ class Validaciones  {
 		$mensaje = null; // Optimista
 		
 		if ( ! is_null($cadena) && strlen($cadena)) {
-			$patron="/^(\d{0,})((\.\d{0,}){0,1})$/i";
+			$patron="/^(\d{0,})(([\.\,]\d{0,}){0,1})$/i";
 			if( ! preg_match($patron, $cadena))
-				$mensaje ='-php- Error: El número debe escribirse usando "." como separador decimal y sin separador de miles';
+				$mensaje ='-php- Error: El número debe escribirse usando "." o"," como separador decimal y sin separador de miles';
 		}
 		return $mensaje ;		
 	}
@@ -366,18 +366,20 @@ class Validaciones  {
 	}
         
         /**
-	 * Cadena representa una fecha valida en España, con el formato dd/mm/aaaa
+	 * Cadena representa una fecha, con el formato dd/mm/aaaa o aaaa-mm-dd
 	 * @param type $cadena
 	 * @return boolean
 	 */
         public static function errores_fecha($cadena){            
-		$mensaje="";                             
-		if ($cadena!=null) {
-                    $cadena=str_replace(array(' ', '/', '.', ',', ':'), '-', $cadena);
+		$mensaje="";
+                var_dump($cadena);
+		if ($cadena!=null ) {                    
+                    $cadena=str_replace(array('/'), '-', $cadena);
                     /* Para que sea mas facil y ahorrar comprobaciones cambiamos por "-" todos los signos que pone en el array, de esta manera la fecha siempre sera del tipo dd/mm/aaaa */
-                    $patron_fecha="/^\d{1,2}\-\d{1,2}\-\d{4}/$";
-                    if (! preg_match($patron_fecha, $cadena)) {                            
-                        $mensaje="La fecha es errónea. Revísela, por favor.";
+                    $patron_fecha="/^\d{1,2}\-\d{1,2}\-\d{4}$/";
+                    $patron_fecha_mysql="/^\d{4}\-\d{1,2}\-\d{1,2}$/";
+                    if ( ! preg_match($patron_fecha, $cadena) && ! preg_match($patron_fecha_mysql, $cadena)) {                            
+                        $mensaje="La fecha es errónea. Escribala en formato dd-mm-aaaa o aaaa-mm-dd, por favor.";
                     }
                 }
 		if ($mensaje=="") $mensaje=false;

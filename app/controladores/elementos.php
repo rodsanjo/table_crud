@@ -48,7 +48,8 @@ class Elementos extends \core\Controlador {
                     $datos["errores"]["errores_validacion"]="Corrige los errores.";
                 }else{
                     //Convertimos a formato MySQL
-                    //$datos['values']['masa_atomica'] = \core\Conversiones::decimal_coma_a_punto($datos['values']['masa_atomica']);
+                    $datos['values']['masa_atomica'] = \core\Conversiones::decimal_puntoOcoma_a_punto($datos['values']['masa_atomica']);
+                    $datos['values']['fecha_salida'] = \core\Conversiones::fecha_es_a_mysql($datos['values']['fecha_salida']);
                     
                     if ( ! $validacion = \modelos\Modelo_SQL::insert($datos["values"], self::$tabla)) // Devuelve true o false
                         $datos["errores"]["errores_validacion"]="No se han podido grabar los datos en la bd.";
@@ -108,8 +109,8 @@ class Elementos extends \core\Controlador {
 		
 		$validaciones = array(
                     "id" => "errores_requerido && errores_numero_entero_positivo && errores_referencia:id/".self::$tabla."/id"
-                    , "nombre" => "errores_requerido && errores_texto && errores_unicidad_insertar:nombre/".self::$tabla."/nombre"
-                    , "simbolo_quimico" => "errores_requerido && errores_texto && errores_unicidad_insertar:simbolo_quimico/".self::$tabla."/simbolo_quimico"
+                    , "nombre" => "errores_requerido && errores_texto && errores_unicidad_modificar:nombre/".self::$tabla."/nombre"
+                    , "simbolo_quimico" => "errores_requerido && errores_texto && errores_unicidad_modificar:simbolo_quimico/".self::$tabla."/simbolo_quimico"
                     , "numero_atomico" => "errores_numero_entero_positivo"
                     , "masa_atomica" => "errores_decimal"
                     //, "tipo_id" => "errores_numero_entero_positivo"
@@ -195,7 +196,7 @@ class Elementos extends \core\Controlador {
 			}
 			else
 			{
-			$datos = array("alerta" => "Se borrado correctamente.");
+			$datos = array("alerta" => "Se ha borrado correctamente.");
 			\core\Distribuidor::cargar_controlador(self::$tabla, 'index', $datos);		
 			}
 		}

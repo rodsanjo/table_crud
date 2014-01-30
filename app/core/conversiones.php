@@ -145,6 +145,31 @@ class Conversiones {
 			return $fecha_hora_es;
 		
 	}
+        
+        /**
+         * Convierte una fecha en formaro europeo (dd-mm-aaaa) al formato usado por mysql
+         * http://php.net/manual/es/datetime.createfromformat.php
+         * 
+         * @param date $fecha
+         * @return date
+         */
+        public static function fecha_es_a_mysql($fecha){
+            $fecha=str_replace(array('/'), '-', $fecha);
+            $patron_fecha = "/^\d{1,2}\-\d{1,2}\-\d{4}$/";
+            if( preg_match($patron_fecha, $fecha)){
+                $fecha = \DateTime::createFromFormat("d-m-Y", $fecha);
+                return ($fecha->format("Y-m-d"));
+            }
+            return $fecha;
+        }
+        
+        public static function decimal_puntoOcoma_a_punto($decimal){
+            if (! is_null($decimal)) {
+                $decimal = (string)$decimal;    // Convertimos a string por si fuera un valor que viene del modelo de datos
+                $decimal = str_replace(array(","), ".", $decimal);
+            }
+            return $decimal;
+        }
 	
 	
 } // Fin de la clase
