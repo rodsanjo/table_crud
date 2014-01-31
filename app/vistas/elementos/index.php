@@ -11,12 +11,12 @@
     <table border='1'>
         <thead>
             <tr>
-                <th>nombre</th>
+                <th>Nombre</th>
                 <th>Símbolo químico</th>
-                <th>Número atómico</th>
+                <th>Nº atómico</th>
                 <th>Masa atómica</th>
-                <th>Fecha adquisición</th>
-                <th>Fecha devolución</th>
+                <th>Última modificación</th>
+                <th>Fecha de validez</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -44,9 +44,9 @@
             echo "
                 <tr>
                     <td colspan='6'></td>
-                <td>"
-        .\core\HTML_Tag::a_boton("boton", array("elementos", "form_insertar"), "insertar").
-                        "</td>
+                    <td>"
+                        .\core\HTML_Tag::a_boton("boton", array("elementos", "form_insertar"), "insertar").
+                    "</td>
                 </tr>
             ";
             ?>

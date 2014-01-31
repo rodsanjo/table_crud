@@ -144,20 +144,21 @@ elseif (isset($datos["alerta"])) {
 heredoc;
 }
 ?>	
-	
+
 		<div id='globals'>
-			<?php
-				 print "<pre>"; 
-				  //print_r($GLOBALS);
-				 print("\$_GET "); print_r($_GET);
-				 print("\$_POST ");print_r($_POST);
-				 print("\$_COOKIE ");print_r($_COOKIE);
-				 print("\$_REQUEST ");print_r($_REQUEST);
-				 print("\$_SESSION ");print_r($_SESSION);
-				 print("\$_SERVER ");print_r($_SERVER);
-				 print "</pre>";
-				 print("xdebug_get_code_coverage() ");
-				 var_dump(xdebug_get_code_coverage());
+			<?php                    
+                            //var_dump($datos);
+                            print "<pre>"; 
+                             //print_r($GLOBALS);
+                            print("\$_GET "); print_r($_GET);
+                            print("\$_POST ");print_r($_POST);
+                            print("\$_COOKIE ");print_r($_COOKIE);
+                            print("\$_REQUEST ");print_r($_REQUEST);
+                            print("\$_SESSION ");print_r($_SESSION);
+                            print("\$_SERVER ");print_r($_SERVER);
+                            print "</pre>";
+                            print("xdebug_get_code_coverage() ");
+                            var_dump(xdebug_get_code_coverage());
 			?>
 		</div>
 		
