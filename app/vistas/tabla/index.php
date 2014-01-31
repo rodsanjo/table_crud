@@ -18,7 +18,7 @@
                 <th>Última modificación</th>
                 <th>Fecha de validez</th>
                 <th>Acciones
-                    <?php echo \core\HTML_Tag::a_boton("boton", array("elementos", "form_insertar"), "insertar"); ?>                 
+                    <?php echo \core\HTML_Tag::a_boton("boton", array("tabla", "form_insertar"), "insertar"); ?>                 
                 </th>
             </tr>
         </thead>
@@ -35,9 +35,9 @@
                         <td>{$fila['fecha_entrada']}</td>
                         <td>{$fila['fecha_salida']}</td>
                         <td>
-                    ".\core\HTML_Tag::a_boton_onclick("boton", array("elementos", "form_modificar", $fila['id']), "modificar")
+                    ".\core\HTML_Tag::a_boton_onclick("boton", array("tabla", "form_modificar", $fila['id']), "modificar")
                     //<a class='boton' href='?menu={$datos['controlador_clase']}&submenu=form_modificar&id={$fila['id']}' >modificar</a>
-                    .\core\HTML_Tag::a_boton_onclick("boton", array("elementos", "form_borrar", $fila['id']), "borrar").
+                    .\core\HTML_Tag::a_boton_onclick("boton", array("tabla", "form_borrar", $fila['id']), "borrar").
                     //<a class='boton' href='?menu={$datos['controlador_clase']}&submenu=form_borrar&id={$fila['id']}' >borrar</a>
                         "</td>
                     </tr>
@@ -47,7 +47,7 @@
                 <tr>
                     <td colspan='6'></td>
                     <td>"
-                        .\core\HTML_Tag::a_boton("boton", array("elementos", "form_insertar"), "insertar").
+                        .\core\HTML_Tag::a_boton("boton", array("tabla", "form_insertar"), "insertar").
                     "</td>
                 </tr>
             ";

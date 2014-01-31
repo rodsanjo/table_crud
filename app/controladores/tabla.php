@@ -1,10 +1,10 @@
 <?php
 namespace controladores;
 
-class Elementos extends \core\Controlador {
+class Tabla extends \core\Controlador {
 
     private static $tabla = 'elementos';
-
+    private static $controlador = 'tabla';
 
     /**
      * Presenta una <table> con las filas de la tabla con igual nombre que la clase.
@@ -55,15 +55,15 @@ class Elementos extends \core\Controlador {
                     $datos["errores"]["errores_validacion"]="No se han podido grabar los datos en la bd.";
             }
             if ( ! $validacion){ //Devolvemos el formulario para que lo intente corregir de nuevo
-                    \core\Distribuidor::cargar_controlador(self::$tabla, 'form_insertar', $datos);
+                    \core\Distribuidor::cargar_controlador(self::$controlador, 'form_insertar', $datos);
             }else{
                     // Se ha grabado la modificación. Devolvemos el control al la situacion anterior a la petición del form_modificar
                     //$datos = array("alerta" => "Se han grabado correctamente los detalles");
                     // Definir el controlador que responderá después de la inserción
                     //\core\Distribuidor::cargar_controlador(self::$tabla, 'index', $datos);
                     $_SESSION["alerta"] = "Se han grabado correctamente los detalles";
-                    //header("Location: ".\core\URL::generar("self::$tabla/index"));
-                    \core\HTTP_Respuesta::set_header_line("location", \core\URL::generar(self::$tabla."/index"));
+                    //header("Location: ".\core\URL::generar("self::$controlador/index"));
+                    \core\HTTP_Respuesta::set_header_line("location", \core\URL::generar(self::$controlador."/index"));
                     \core\HTTP_Respuesta::enviar();
             }
     }
@@ -130,11 +130,11 @@ class Elementos extends \core\Controlador {
 
             }
             if ( ! $validacion) //Devolvemos el formulario para que lo intente corregir de nuevo
-                    \core\Distribuidor::cargar_controlador(self::$tabla, 'form_modificar', $datos);
+                    \core\Distribuidor::cargar_controlador(self::$controlador, 'form_modificar', $datos);
             else {
                     $datos = array("alerta" => "Se han modificado correctamente.");
                     // Definir el controlador que responderá después de la inserción
-                    \core\Distribuidor::cargar_controlador(self::$tabla, 'index', $datos);		
+                    \core\Distribuidor::cargar_controlador(self::$controlador, 'index', $datos);		
             }
 
     }
@@ -197,7 +197,7 @@ class Elementos extends \core\Controlador {
                     else
                     {
                     $datos = array("alerta" => "Se ha borrado correctamente.");
-                    \core\Distribuidor::cargar_controlador(self::$tabla, 'index', $datos);		
+                    \core\Distribuidor::cargar_controlador(self::$controlador, 'index', $datos);		
                     }
             }
 
