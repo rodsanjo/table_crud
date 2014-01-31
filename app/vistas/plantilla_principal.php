@@ -52,29 +52,8 @@
 			<?php endif; ?>
 			EJERCICIO TABLE CRUD</h1>
                         <h2>Jorge Rodríguez Sanz</h2>
-		</div>
-		
-		<div id="div_derecha_logo">
-			Usuario: 
-			<?php 
-			echo "<b>".\core\Usuario::$login."</b>";
-			if (\core\Usuario::$login != 'anonimo') {
-				echo " <a href='".\core\URL::generar("usuarios/desconectar")."'>Desconectar</a>";
-			}
-			else {
-				if ((\core\Usuario::$login == "anonimo") && ! (\core\Distribuidor::get_controlador_instanciado() == "usuarios" && \core\Distribuidor::get_metodo_invocado() == "form_login")) {
-					echo " <a href='".\core\URL::generar("usuarios/form_login")."'>Conectar</a>";
-				}
-				if ((\core\Usuario::$login == "anonimo") && ! (\core\Distribuidor::get_controlador_instanciado() == "usuarios" && \core\Distribuidor::get_metodo_invocado() == "form_insertar_externo")) {
-					echo " <a href='".\core\URL::generar("usuarios/form_insertar_externo")."'>Regístrate</a>";
-				}
-			}
-			echo "<br />Fecha local: <span id='fecha'></span>";
-			echo "<br />Tiempo desde conexión: <span id='tiempo_desde_conexion'>".gmdate('H:i:s',  \core\Usuario::$sesion_segundos_duracion)."</span>";
-			echo "<br />Tiempo inactivo: <span id='tiempo_inactivo'></span>";	
-			?>
-		</div>
-		
+		</div>	
+
 		<div id="div_menu" >
 			<fieldset>
 				<legend>Menú - Índice - Barra de navegación:</legend>
