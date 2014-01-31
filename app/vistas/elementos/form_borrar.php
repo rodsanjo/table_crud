@@ -8,7 +8,6 @@
                 window.document.getElementById("masa_atomica").readOnly='readonly';
                 window.document.getElementById("fecha_entrada").readOnly='readonly';
                 window.document.getElementById("fecha_salida").readOnly='readonly';
-                window.document.getElementById("limpiar").type='hidden';
-                
+                formulario.limpiar.style.display = "none";                
 	</script>
 </div>

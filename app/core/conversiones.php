@@ -163,6 +163,12 @@ class Conversiones {
             return $fecha;
         }
         
+        /**
+         * Sirve para sustituir indistintamente el punto o coma usado por el usuario
+         * como separador de decimales a punto que utiliza MySQL
+         * @param float $decimal
+         * @return string
+         */
         public static function decimal_puntoOcoma_a_punto($decimal){
             if (! is_null($decimal)) {
                 $decimal = (string)$decimal;    // Convertimos a string por si fuera un valor que viene del modelo de datos

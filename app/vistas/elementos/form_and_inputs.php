@@ -5,11 +5,11 @@
 	
 	<input id='id' name='id' type='hidden' value='<?php echo \core\Array_Datos::values('id', $datos); ?>' />
 	
-        Nombre: <input id='nombre' name='nombre' type='text' size='15'  maxlength='30' value='<?php echo \core\Array_Datos::values('nombre', $datos); ?>'/>
+        Nombre*: <input id='nombre' name='nombre' type='text' size='15'  maxlength='30' value='<?php echo \core\Array_Datos::values('nombre', $datos); ?>'/>
 	<?php echo \core\HTML_Tag::span_error('nombre', $datos); ?>
 	<br />
         
-        Símbolo químico: <input id='simbolo_quimico' name='simbolo_quimico' type='text' size='2'  maxlength='3' value='<?php echo \core\Array_Datos::values('simbolo_quimico', $datos); ?>'/>
+        Símbolo químico*: <input id='simbolo_quimico' name='simbolo_quimico' type='text' size='2'  maxlength='3' value='<?php echo \core\Array_Datos::values('simbolo_quimico', $datos); ?>'/>
 	<?php echo \core\HTML_Tag::span_error('simbolo_quimico', $datos); ?>
 	<br />
         
@@ -28,11 +28,11 @@
         Fecha de salida: <input id='fecha_salida' name='fecha_salida' type='date' maxlength='10' value='<?php echo \core\Array_Datos::values('fecha_salida', $datos); ?>'/>
 	<?php echo \core\HTML_Tag::span_error('fecha_salida', $datos); ?>
 	<br />
-        
+        *Campos obligatorios
 	<br />
 	<?php echo \core\HTML_Tag::span_error('errores_validacion', $datos); ?>
 	
 	<input type='submit' value='Enviar'/>
-	<input id="limpiar" type='reset' value='Limpiar'/>
+	<input name="limpiar" type='reset' value='Limpiar'/>
         <button type='button' onclick='window.location.assign("<?php echo \core\URL::generar($datos['controlador_clase']); ?>");'>Cancelar</button>
 </form>

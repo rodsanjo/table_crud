@@ -147,7 +147,7 @@ class HTML_Tag extends \core\Clase_Base {
 		
 		$argumentos ="";
 		foreach ($otros_argumentos as $key => $value) {
-			$argumentos .= " $key ='$value' ";
+			$argumentos .= " $key ='$value' ";                       
 		}
 		$uri = \core\URL::http_generar($query_string);
 		$link = "<a class='$clases' href='$uri' $argumentos >$texto</a>";
@@ -159,7 +159,7 @@ class HTML_Tag extends \core\Clase_Base {
 	
 	/**
 	 * Método pensados para evitar que se envíe por get el id de algunas peticiones como
-	 * form_modificar o form_borrar. 
+	 * form_modificar o form_borrar.
 	 * La query string debe tener máximo tres argumentos, siendo el tercero el valor para el id
 	 * 
 	 * @param string $clases Ejemplo: "clase1 clase2 clase3 ..."
