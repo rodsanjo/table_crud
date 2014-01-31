@@ -80,12 +80,14 @@ class Distribuidor {
 				
 			}
 			else {
-				$datos['mensaje'] = "El método <b>$metodo</b> no está definido en la clase <b>$controlador_clase</b> (.php).";
-				return self::cargar_controlador("errores", "error_404", $datos);
+                            $datos['mensaje'] = "Documento no encontrado.";
+                            //$datos['mensaje'] = "El método <b>$metodo</b> no está definido en la clase <b>$controlador_clase</b> (.php).";
+                            return self::cargar_controlador("errores", "error_404", $datos);
 			}
 		}
 		else {
-			$datos['mensaje'] = "La clase <b>$controlador_clase</b> no existe.";
+                    $datos['mensaje'] = "Documento no encontrado.";
+			//$datos['mensaje'] = "La clase <b>$controlador_clase</b> no existe.";
 			return self::cargar_controlador("errores", "error_404", $datos);
 		}
 	}

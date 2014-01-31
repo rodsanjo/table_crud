@@ -1,4 +1,0 @@
-RewriteEngine On
-
-# "F" prohibe acceder a esta carpeta
-RewriteRule .* - [F]

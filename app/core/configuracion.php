@@ -22,7 +22,7 @@ class Configuracion {
 
 	public static $idioma_por_defecto = "es";
 	public static $idioma_seleccionado;
-	public static $idiomas_reconocidos = "es|en|fr";
+	public static $idiomas_reconocidos = "es|en";
 	
 	public static $https_login = false;
 	public static $form_login_catcha = false;

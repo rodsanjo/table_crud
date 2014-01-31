@@ -1,3 +1,0 @@
-id;href;title;texto_visualizado
-seccion1;?menu=revista&seccion=seccion1;Sección I de la revista bla, bla, bla;Seccion I
-seccion2;?menu=revista&seccion=seccion2;Sección II de la revista bla, bla, bla;Seccion II

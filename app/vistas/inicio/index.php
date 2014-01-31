@@ -3,7 +3,7 @@
         <ol>
             <li><h1>Introducción</h1>
         <p>
-            De la lectura de http://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+            De la lectura de <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete" target="_blank">http://en.wikipedia.org/wiki/Create,_read,_update_and_delete</a>
 In Database applications, the acronym CRUD refers to all of the major functions that are
 implemented in relational database applications. Each letter in the acronym can map to a
 standard SQL statement and HTTP method:

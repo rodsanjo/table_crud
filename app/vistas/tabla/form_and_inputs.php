@@ -21,8 +21,8 @@
 	<?php echo \core\HTML_Tag::span_error('masa_atomica', $datos); ?>
 	<br />
         <!--
-        Fecha y hora de entrada: <input id='fecha_entrada' name='fecha_entrada' type='text' size='18'  maxlength='19' value='<?php echo \core\Array_Datos::values('fecha_entrada', $datos); ?>'/>
-	<?php echo \core\HTML_Tag::span_error('fecha_entrada', $datos); ?>
+        Fecha y hora de entrada: <input id='fecha_entrada' name='fecha_entrada' type='text' size='18'  maxlength='19' value='<?php //echo \core\Array_Datos::values('fecha_entrada', $datos); ?>'/>
+	<?php //echo \core\HTML_Tag::span_error('fecha_entrada', $datos); ?>
 	<br />
         -->
         Fecha de salida: <input id='fecha_salida' name='fecha_salida' type='date' maxlength='10' value='<?php echo \core\Array_Datos::values('fecha_salida', $datos); ?>'/>

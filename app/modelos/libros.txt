@@ -1,5 +1,0 @@
-título;autor;comentario
-Título A;Autor de A;Comentario de A
-Título B;Autor de B;Comentario de B
-Título C;Autor de c;Comentario de C
-Título D;Autor de D;Comentario de D

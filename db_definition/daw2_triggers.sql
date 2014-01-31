@@ -8,6 +8,7 @@
 
 drop trigger if exists daw2_t_add_7anhos_f_salida_de_elementos_ai;
 
+/*Función para poner la fecha de salida por defecto 7 años desde la fecha en la que se insertan los datos
 delimiter // /*No funciona*/
 create trigger daw2_t_add_7anhos_f_salida_de_elementos_ai
 after insert on daw2_elementos for each row
