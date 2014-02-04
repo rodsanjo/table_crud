@@ -15,14 +15,17 @@ class Tabla extends \core\Controlador {
             $clausulas['order_by'] = 'nombre';
             //$datos["filas"] = \modelos\self::$tabla::select($clausulas, "self::$tabla"); // Recupera todas las filas ordenadas
             $datos["filas"] = \modelos\Modelo_SQL::table(self::$tabla)->select($clausulas); // Recupera todas las filas ordenadas
-
+            
             $datos['view_content'] = \core\Vista::generar(__FUNCTION__, $datos);
             $http_body = \core\Vista_Plantilla::generar('plantilla_principal', $datos);
             \core\HTTP_Respuesta::enviar($http_body);
 
     }
 
-
+    /**
+     * Presenta un formulario para insertar nuevas filas a la tabla
+     * @param array $datos
+     */
     public function form_insertar(array $datos=array()) {
 
             $datos["form_name"] = __FUNCTION__;
@@ -31,7 +34,12 @@ class Tabla extends \core\Controlador {
             \core\HTTP_Respuesta::enviar($http_body);
 
     }
-
+    
+    /**
+     * Valida los datos insertados por el usuario. Si estos son correctos mostrará la tabla con 
+     * la nueva inserción, sino mostrará los errores por los que nos se admitió los datos introducidos.
+     * @param array $datos
+     */
     public function validar_form_insertar(array $datos=array()) {
 
             $validaciones = array(                    
@@ -74,8 +82,8 @@ class Tabla extends \core\Controlador {
 
         $datos["form_name"] = __FUNCTION__;
         
-        If ( \core\HTTP_Requerimiento::method()== 'GET'){
-            $datos['mensaje']="No se pueden añadir datos en la URL de foma manual";
+        If ( \core\HTTP_Requerimiento::method()!= 'POST'){
+            $datos['mensaje']="No se pueden añadir datos en la URL de forma manual";
             \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
         }
 
@@ -84,7 +92,7 @@ class Tabla extends \core\Controlador {
                 "id" => "errores_requerido && errores_numero_entero_positivo && errores_referencia:id/".self::$tabla."/id"
             );
             if ( ! $validacion = ! \core\Validaciones::errores_validacion_request($validaciones, $datos)) {
-                $datos['mensaje'] = 'Datos erróneos para identificar el artículo a modificar';
+                $datos['mensaje'] = 'Datos erróneos para identificar el elemento a modificar';
                 \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
                 return;
             }else{
@@ -100,7 +108,13 @@ class Tabla extends \core\Controlador {
                 }
             }
         }
-
+        
+        //Mostramos los datos a modificar en formato europeo. Convertimos el formato de MySQL a europeo
+        $datos['values']['masa_atomica']=  \core\Conversiones::decimal_punto_a_coma($datos['values']['masa_atomica']);
+        if(preg_match("/MSIE/", $_SERVER['HTTP_USER_AGENT'])){
+            $datos['values']['fecha_salida']=  \core\Conversiones::fecha_mysql_a_es($datos['values']['fecha_salida']);
+        }
+                
         $datos['view_content'] = \core\Vista::generar(__FUNCTION__, $datos);
         $http_body = \core\Vista_Plantilla::generar('plantilla_principal', $datos);
         \core\HTTP_Respuesta::enviar($http_body);
@@ -150,8 +164,8 @@ class Tabla extends \core\Controlador {
 
             $datos["form_name"] = __FUNCTION__;
             
-            If ( \core\HTTP_Requerimiento::method()== 'GET'){
-                $datos['mensaje']="No se pueden añadir datos en la URL de foma manual";
+            If ( \core\HTTP_Requerimiento::method()!= 'POST'){
+                $datos['mensaje']="No se pueden añadir datos en la URL de forma manual";
                 \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
             }
             
@@ -223,6 +237,11 @@ class Tabla extends \core\Controlador {
     private static function convertir_a_formato_mysql(array &$param) {  //$param = datos['values'] y lo pasamos por referencia, para que modificque el valor        
         $param['masa_atomica'] = \core\Conversiones::decimal_puntoOcoma_a_punto($param['masa_atomica']);
         $param['fecha_salida'] = \core\Conversiones::fecha_es_a_mysql($param['fecha_salida']);
+    }
+    
+    private static function convertir_formato_mysql_a_ususario(array &$param) {  //$param = datos['values'] y lo pasamos por referencia, para que modificque el valor        
+        //$param['fecha_salida']=  \core\Conversiones::fecha_mysql_a_es($param['fecha_salida']);
+        $param['masa_atomica']=  \core\Conversiones::decimal_punto_a_coma($param['masa_atomica']);
     }
 
     public function listado_pdf(array $datos=array()) {

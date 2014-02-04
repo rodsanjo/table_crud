@@ -165,6 +165,24 @@ class Conversiones {
         }
         
         /**
+         * Convierte una fecha en formaro MySQL (YYYY-mm-dd) al formato europeo
+         * http://php.net/manual/es/datetime.createfromformat.php
+         * 
+         * @author Jorge Rodríguez Sanz
+         * @param date $fecha
+         * @return date
+         */
+        public static function fecha_mysql_a_es($fecha){
+            $fecha=str_replace(array('/'), '-', $fecha);
+            $patron_fecha = "/^\d{4}\-\d{1,2}\-\d{1,2}$/";
+            if( preg_match($patron_fecha, $fecha)){
+                $fecha = \DateTime::createFromFormat("Y-m-d", $fecha);
+                return ($fecha->format("d-m-Y"));
+            }
+            return $fecha;
+        }
+        
+        /**
          * Sirve para sustituir indistintamente el punto o coma usado por el usuario
          * como separador de decimales a punto que utiliza MySQL
          * 
