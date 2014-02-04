@@ -74,7 +74,7 @@ class Tabla extends \core\Controlador {
 
         $datos["form_name"] = __FUNCTION__;
         
-        If ( ! \core\HTTP_Requerimiento::method()== 'POST'){
+        If ( \core\HTTP_Requerimiento::method()== 'GET'){
             $datos['mensaje']="No se pueden añadir datos en la URL de foma manual";
             \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
         }
@@ -150,7 +150,7 @@ class Tabla extends \core\Controlador {
 
             $datos["form_name"] = __FUNCTION__;
             
-            If ( ! \core\HTTP_Requerimiento::method()== 'POST'){
+            If ( \core\HTTP_Requerimiento::method()== 'GET'){
                 $datos['mensaje']="No se pueden añadir datos en la URL de foma manual";
                 \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
             }
