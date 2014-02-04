@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class core\sgbd\bd | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li class="active"><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-core.sgbd.bd.html">bd</a></li>
+				<li><a href="class-core.sgbd.mysqli.html">mysqli</a></li>
+				<li><a href="class-core.sgbd.SQL_abstract.html">SQL_abstract</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-core.sgbd.SQL_interface.html">SQL_interface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-core.sgbd.html" title="Summary of core\sgbd"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class bd</h1>
+
+
+	<div class="description">
+	
+<p>Esta es la clase que debe usarse para acceder a cualquier objeto de la base
+de datos. Incorpora mediante herencia (extends) todos los metodos del sgbd usado
+en la aplicación.</p>
+
+<p>Esta clase debe extender la clase en la que se implementa la conexión con el
+SGBD elegido para la aplicación.</p>
+
+<p>En este caso es mysqli. Si hubiese sido db2 pues se hubira extendido la clase
+que contuviera la implementación para db2.</p>
+
+<p>Después, esta clase \core\sgbd\bd se extenderá cuando se creen las clases
+específicas para implementar la manipulación y recuperación de datos en cada
+tabla, clases que estarán en la carpeta app\datos\nombre_tabla.php</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-core.sgbd.mysqli.html"><span>core\sgbd\mysqli</span></a>
+			
+			 implements 
+				<a href="class-core.sgbd.SQL_interface.html"><span>core\sgbd\SQL_interface</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>core\sgbd\bd</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-modelos.Datos_SQL.html">modelos\Datos_SQL</a>, 
+			<a href="class-modelos.Modelo_SQL.html">modelos\Modelo_SQL</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-core.html">core</a>\<a href="namespace-core.sgbd.html">sgbd</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-core.sgbd.bd.html#4-48" title="Go to source code">app/core/sgbd/bd.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="table" id="_table">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-core.sgbd.bd.html">core\sgbd\bd</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table">#</a>
+		<code><a href="source-class-core.sgbd.bd.html#19-32" title="Go to source code">table</a>( <span>string <var>$table_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Define la tabla que se usará por defecto en los métodos de manipulación y
+recuperación que se vayan a utilizar a continuación para manejar datos. El
+nombre de tabla aportado puede ser un nombre de una clase del namespace
+datos</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define la tabla que se usará por defecto en los métodos de manipulación y
+recuperación que se vayan a utilizar a continuación para manejar datos. El
+nombre de tabla aportado puede ser un nombre de una clase del namespace
+datos</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table_name</var></dt>
+					<dd><code>string</code><br>$table_name Ejemplo: "usuarios" "articulos"</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-core.sgbd.bd.html">core\sgbd\bd</a></code></code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="recuperar_filas" id="_recuperar_filas">
+
+		<td class="attributes"><code>
+			 public static
+			false|array_of_rows
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_recuperar_filas">#</a>
+		<code><a href="source-class-core.sgbd.bd.html#35-46" title="Go to source code">recuperar_filas</a>( <span>type <var>$consulta</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Alias de get_rows()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Alias de get_rows()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$consulta</var></dt>
+					<dd><code>type</code><br>$consulta</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>false|array_of_rows</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-core.sgbd.mysqli.html#methods">core\sgbd\mysqli</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-core.sgbd.mysqli.html#___construct">__construct()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_commit_transacction">commit_transacction()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_connect">connect()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_delete">delete()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_delete_row">delete_row()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_disconnect">disconnect()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_escape_string">escape_string()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_execute">execute()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_get_prefix_tabla">get_prefix_tabla()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_get_rows">get_rows()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_get_table_name">get_table_name()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_insert">insert()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_insert_row">insert_row()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_last_insert_id">last_insert_id()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_last_query">last_query()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_rollback_transacction">rollback_transacction()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_select">select()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_set_table_name">set_table_name()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_start_transacction">start_transacction()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_update">update()</a>, 
+			<a href="class-core.sgbd.mysqli.html#_update_row">update_row()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-core.sgbd.mysqli.html#properties">core\sgbd\mysqli</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-core.sgbd.mysqli.html#$connection"><var>$connection</var></a>, 
+			<a href="class-core.sgbd.mysqli.html#$query"><var>$query</var></a>, 
+			<a href="class-core.sgbd.mysqli.html#$result"><var>$result</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -67,8 +67,8 @@
 			?>
 			
 		</div>
+                
 
-	
 		<div id="pie">
 			
 			Pie del documento.<br />

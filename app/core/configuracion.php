@@ -59,9 +59,9 @@ class Configuracion {
 	// hostinger
 //	public static $db = array(
 //		'server'   => 'mysql.hostinger.es',
-//		'user'     => 'u452950836_daw2',
-//		'password' => 'u452950836_daw2',
-//		'db_name'   => 'u452950836_daw2',
+//		'user'     => 'u684343090_daw2',
+//		'password' => 'u684343090_daw2',
+//		'db_name'   => 'u684343090_daw2',
 //		'prefix_'  => 'daw2_'
 //	);
 	

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File app/lib/php/dompdf/include/dompdf.cls.php | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li class="active"><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Abstract_Renderer.html">Abstract_Renderer</a></li>
+				<li><a href="class-Attribute_Translator.html">Attribute_Translator</a></li>
+				<li><a href="class-Block_Frame_Decorator.html">Block_Frame_Decorator</a></li>
+				<li><a href="class-Block_Frame_Reflower.html">Block_Frame_Reflower</a></li>
+				<li><a href="class-Block_Positioner.html">Block_Positioner</a></li>
+				<li><a href="class-Block_Renderer.html">Block_Renderer</a></li>
+				<li><a href="class-Cached_PDF_Decorator.html">Cached_PDF_Decorator</a></li>
+				<li><a href="class-Canvas_Factory.html">Canvas_Factory</a></li>
+				<li><a href="class-Cellmap.html">Cellmap</a></li>
+				<li><a href="class-Cpdf.html">Cpdf</a></li>
+				<li><a href="class-CPDF_Adapter.html">CPDF_Adapter</a></li>
+				<li class="active"><a href="class-DOMPDF.html">DOMPDF</a></li>
+				<li><a href="class-Font_Metrics.html">Font_Metrics</a></li>
+				<li><a href="class-Frame.html">Frame</a></li>
+				<li><a href="class-Frame_Decorator.html">Frame_Decorator</a></li>
+				<li><a href="class-Frame_Factory.html">Frame_Factory</a></li>
+				<li><a href="class-Frame_Reflower.html">Frame_Reflower</a></li>
+				<li><a href="class-Frame_Tree.html">Frame_Tree</a></li>
+				<li><a href="class-FrameList.html">FrameList</a></li>
+				<li><a href="class-FrameListIterator.html">FrameListIterator</a></li>
+				<li><a href="class-FrameTreeIterator.html">FrameTreeIterator</a></li>
+				<li><a href="class-FrameTreeList.html">FrameTreeList</a></li>
+				<li><a href="class-GD_Adapter.html">GD_Adapter</a></li>
+				<li><a href="class-Generated_Frame_Reflower.html">Generated_Frame_Reflower</a></li>
+				<li><a href="class-Image_Cache.html">Image_Cache</a></li>
+				<li><a href="class-Image_Frame_Decorator.html">Image_Frame_Decorator</a></li>
+				<li><a href="class-Image_Frame_Reflower.html">Image_Frame_Reflower</a></li>
+				<li><a href="class-Image_Renderer.html">Image_Renderer</a></li>
+				<li><a href="class-Inline_Frame_Decorator.html">Inline_Frame_Decorator</a></li>
+				<li><a href="class-Inline_Frame_Reflower.html">Inline_Frame_Reflower</a></li>
+				<li><a href="class-Inline_Positioner.html">Inline_Positioner</a></li>
+				<li><a href="class-Inline_Renderer.html">Inline_Renderer</a></li>
+				<li><a href="class-List_Bullet_Frame_Decorator.html">List_Bullet_Frame_Decorator</a></li>
+				<li><a href="class-List_Bullet_Frame_Reflower.html">List_Bullet_Frame_Reflower</a></li>
+				<li><a href="class-List_Bullet_Image_Frame_Decorator.html">List_Bullet_Image_Frame_Decorator</a></li>
+				<li><a href="class-List_Bullet_Positioner.html">List_Bullet_Positioner</a></li>
+				<li><a href="class-List_Bullet_Renderer.html">List_Bullet_Renderer</a></li>
+				<li><a href="class-Null_Frame_Decorator.html">Null_Frame_Decorator</a></li>
+				<li><a href="class-Null_Frame_Reflower.html">Null_Frame_Reflower</a></li>
+				<li><a href="class-Null_Positioner.html">Null_Positioner</a></li>
+				<li><a href="class-Page_Cache.html">Page_Cache</a></li>
+				<li><a href="class-Page_Frame_Decorator.html">Page_Frame_Decorator</a></li>
+				<li><a href="class-Page_Frame_Reflower.html">Page_Frame_Reflower</a></li>
+				<li><a href="class-PDFLib_Adapter.html">PDFLib_Adapter</a></li>
+				<li><a href="class-PHP_Evaluator.html">PHP_Evaluator</a></li>
+				<li><a href="class-Positioner.html">Positioner</a></li>
+				<li><a href="class-ReCaptchaResponse.html">ReCaptchaResponse</a></li>
+				<li><a href="class-Renderer.html">Renderer</a></li>
+				<li><a href="class-Style.html">Style</a></li>
+				<li><a href="class-Stylesheet.html">Stylesheet</a></li>
+				<li><a href="class-Table_Cell_Frame_Decorator.html">Table_Cell_Frame_Decorator</a></li>
+				<li><a href="class-Table_Cell_Frame_Reflower.html">Table_Cell_Frame_Reflower</a></li>
+				<li><a href="class-Table_Cell_Positioner.html">Table_Cell_Positioner</a></li>
+				<li><a href="class-Table_Cell_Renderer.html">Table_Cell_Renderer</a></li>
+				<li><a href="class-Table_Frame_Decorator.html">Table_Frame_Decorator</a></li>
+				<li><a href="class-Table_Frame_Reflower.html">Table_Frame_Reflower</a></li>
+				<li><a href="class-Table_Row_Frame_Decorator.html">Table_Row_Frame_Decorator</a></li>
+				<li><a href="class-Table_Row_Frame_Reflower.html">Table_Row_Frame_Reflower</a></li>
+				<li><a href="class-Table_Row_Group_Frame_Decorator.html">Table_Row_Group_Frame_Decorator</a></li>
+				<li><a href="class-Table_Row_Group_Frame_Reflower.html">Table_Row_Group_Frame_Reflower</a></li>
+				<li><a href="class-Table_Row_Positioner.html">Table_Row_Positioner</a></li>
+				<li><a href="class-TCPDF_Adapter.html">TCPDF_Adapter</a></li>
+				<li><a href="class-Text_Frame_Decorator.html">Text_Frame_Decorator</a></li>
+				<li><a href="class-Text_Frame_Reflower.html">Text_Frame_Reflower</a></li>
+				<li><a href="class-Text_Renderer.html">Text_Renderer</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Canvas.html">Canvas</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-DOMPDF_Exception.html">DOMPDF_Exception</a></li>
+				<li><a href="class-DOMPDF_Internal_Exception.html">DOMPDF_Internal_Exception</a></li>
+			</ul>
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-_recaptcha_aes_encrypt.html">_recaptcha_aes_encrypt</a></li>
+				<li><a href="function-_recaptcha_aes_pad.html">_recaptcha_aes_pad</a></li>
+				<li><a href="function-_recaptcha_http_post.html">_recaptcha_http_post</a></li>
+				<li><a href="function-_recaptcha_mailhide_email_parts.html">_recaptcha_mailhide_email_parts</a></li>
+				<li><a href="function-_recaptcha_mailhide_urlbase64.html">_recaptcha_mailhide_urlbase64</a></li>
+				<li><a href="function-_recaptcha_qsencode.html">_recaptcha_qsencode</a></li>
+				<li><a href="function-build_url.html">build_url</a></li>
+				<li><a href="function-dec2roman.html">dec2roman</a></li>
+				<li><a href="function-DOMPDF_autoload.html">DOMPDF_autoload</a></li>
+				<li><a href="function-dompdf_usage.html">dompdf_usage</a></li>
+				<li><a href="function-enable_mem_profile.html">enable_mem_profile</a></li>
+				<li><a href="function-explode_url.html">explode_url</a></li>
+				<li><a href="function-getoptions.html">getoptions</a></li>
+				<li><a href="function-install_font_family.html">install_font_family</a></li>
+				<li><a href="function-is_percent.html">is_percent</a></li>
+				<li><a href="function-mark_memusage.html">mark_memusage</a></li>
+				<li><a href="function-mb_strlen.html">mb_strlen</a></li>
+				<li><a href="function-mb_strpos.html">mb_strpos</a></li>
+				<li><a href="function-mb_strrpos.html">mb_strrpos</a></li>
+				<li><a href="function-mb_strtolower.html">mb_strtolower</a></li>
+				<li><a href="function-mb_strtoupper.html">mb_strtoupper</a></li>
+				<li><a href="function-mb_substr.html">mb_substr</a></li>
+				<li><a href="function-mb_substr_count.html">mb_substr_count</a></li>
+				<li><a href="function-pre_r.html">pre_r</a></li>
+				<li><a href="function-pre_var_dump.html">pre_var_dump</a></li>
+				<li><a href="function-print_memusage.html">print_memusage</a></li>
+				<li><a href="function-recaptcha_check_answer.html">recaptcha_check_answer</a></li>
+				<li><a href="function-recaptcha_get_html.html">recaptcha_get_html</a></li>
+				<li><a href="function-recaptcha_get_signup_url.html">recaptcha_get_signup_url</a></li>
+				<li><a href="function-recaptcha_mailhide_html.html">recaptcha_mailhide_html</a></li>
+				<li><a href="function-recaptcha_mailhide_url.html">recaptcha_mailhide_url</a></li>
+				<li><a href="function-record_warnings.html">record_warnings</a></li>
+				<li><a href="function-usage.html">usage</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="class-DOMPDF.html" title="Summary of DOMPDF"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2">  2: </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3">  3: </a><span class="php-comment"> * DOMPDF - PHP5 HTML to PDF renderer
+</span></span><span id="4" class="l"><a class="l" href="#4">  4: </a><span class="php-comment"> *
+</span></span><span id="5" class="l"><a class="l" href="#5">  5: </a><span class="php-comment"> * File: $RCSfile: dompdf.cls.php,v $
+</span></span><span id="6" class="l"><a class="l" href="#6">  6: </a><span class="php-comment"> * Created on: 2004-06-09
+</span></span><span id="7" class="l"><a class="l" href="#7">  7: </a><span class="php-comment"> *
+</span></span><span id="8" class="l"><a class="l" href="#8">  8: </a><span class="php-comment"> * Copyright (c) 2004 - Benj Carson &lt;benjcarson@digitaljunkies.ca&gt;
+</span></span><span id="9" class="l"><a class="l" href="#9">  9: </a><span class="php-comment"> *
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10: </a><span class="php-comment"> * This library is free software; you can redistribute it and/or
+</span></span><span id="11" class="l"><a class="l" href="#11"> 11: </a><span class="php-comment"> * modify it under the terms of the GNU Lesser General Public
+</span></span><span id="12" class="l"><a class="l" href="#12"> 12: </a><span class="php-comment"> * License as published by the Free Software Foundation; either
+</span></span><span id="13" class="l"><a class="l" href="#13"> 13: </a><span class="php-comment"> * version 2.1 of the License, or (at your option) any later version.
+</span></span><span id="14" class="l"><a class="l" href="#14"> 14: </a><span class="php-comment"> *
+</span></span><span id="15" class="l"><a class="l" href="#15"> 15: </a><span class="php-comment"> * This library is distributed in the hope that it will be useful,
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16: </a><span class="php-comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of
+</span></span><span id="17" class="l"><a class="l" href="#17"> 17: </a><span class="php-comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+</span></span><span id="18" class="l"><a class="l" href="#18"> 18: </a><span class="php-comment"> * Lesser General Public License for more details.
+</span></span><span id="19" class="l"><a class="l" href="#19"> 19: </a><span class="php-comment"> *
+</span></span><span id="20" class="l"><a class="l" href="#20"> 20: </a><span class="php-comment"> * You should have received a copy of the GNU Lesser General Public License
+</span></span><span id="21" class="l"><a class="l" href="#21"> 21: </a><span class="php-comment"> * along with this library in the file LICENSE.LGPL; if not, write to the
+</span></span><span id="22" class="l"><a class="l" href="#22"> 22: </a><span class="php-comment"> * Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+</span></span><span id="23" class="l"><a class="l" href="#23"> 23: </a><span class="php-comment"> * 02111-1307 USA
+</span></span><span id="24" class="l"><a class="l" href="#24"> 24: </a><span class="php-comment"> *
+</span></span><span id="25" class="l"><a class="l" href="#25"> 25: </a><span class="php-comment"> * Alternatively, you may distribute this software under the terms of the
+</span></span><span id="26" class="l"><a class="l" href="#26"> 26: </a><span class="php-comment"> * PHP License, version 3.0 or later.  A copy of this license should have
+</span></span><span id="27" class="l"><a class="l" href="#27"> 27: </a><span class="php-comment"> * been distributed with this file in the file LICENSE.PHP .  If this is not
+</span></span><span id="28" class="l"><a class="l" href="#28"> 28: </a><span class="php-comment"> * the case, you can obtain a copy at http://www.php.net/license/3_0.txt.
+</span></span><span id="29" class="l"><a class="l" href="#29"> 29: </a><span class="php-comment"> *
+</span></span><span id="30" class="l"><a class="l" href="#30"> 30: </a><span class="php-comment"> * The latest version of DOMPDF might be available at:
+</span></span><span id="31" class="l"><a class="l" href="#31"> 31: </a><span class="php-comment"> * http://www.digitaljunkies.ca/dompdf
+</span></span><span id="32" class="l"><a class="l" href="#32"> 32: </a><span class="php-comment"> *
+</span></span><span id="33" class="l"><a class="l" href="#33"> 33: </a><span class="php-comment"> * @link http://www.digitaljunkies.ca/dompdf
+</span></span><span id="34" class="l"><a class="l" href="#34"> 34: </a><span class="php-comment"> * @copyright 2004 Benj Carson
+</span></span><span id="35" class="l"><a class="l" href="#35"> 35: </a><span class="php-comment"> * @author Benj Carson &lt;benjcarson@digitaljunkies.ca&gt;
+</span></span><span id="36" class="l"><a class="l" href="#36"> 36: </a><span class="php-comment"> * @package dompdf
+</span></span><span id="37" class="l"><a class="l" href="#37"> 37: </a><span class="php-comment"> * @version 0.5.1
+</span></span><span id="38" class="l"><a class="l" href="#38"> 38: </a><span class="php-comment"> */</span>
+</span><span id="39" class="l"><a class="l" href="#39"> 39: </a>
+</span><span id="40" class="l"><a class="l" href="#40"> 40: </a><span class="php-comment">/* $Id: dompdf.cls.php,v 1.18 2006/07/07 21:31:03 benjcarson Exp $ */</span>
+</span><span id="41" class="l"><a class="l" href="#41"> 41: </a>
+</span><span id="42" class="l"><a class="l" href="#42"> 42: </a><span class="php-comment">/**
+</span></span><span id="43" class="l"><a class="l" href="#43"> 43: </a><span class="php-comment"> * DOMPDF - PHP5 HTML to PDF renderer
+</span></span><span id="44" class="l"><a class="l" href="#44"> 44: </a><span class="php-comment"> *
+</span></span><span id="45" class="l"><a class="l" href="#45"> 45: </a><span class="php-comment"> * DOMPDF loads HTML and does its best to render it as a PDF.  It gets its
+</span></span><span id="46" class="l"><a class="l" href="#46"> 46: </a><span class="php-comment"> * name from the new DomDocument PHP5 extension.  Source HTML is first
+</span></span><span id="47" class="l"><a class="l" href="#47"> 47: </a><span class="php-comment"> * parsed by a DomDocument object.  DOMPDF takes the resulting DOM tree and
+</span></span><span id="48" class="l"><a class="l" href="#48"> 48: </a><span class="php-comment"> * attaches a {@link Frame} object to each node.  {@link Frame} objects store
+</span></span><span id="49" class="l"><a class="l" href="#49"> 49: </a><span class="php-comment"> * positioning and layout information and each has a reference to a {@link
+</span></span><span id="50" class="l"><a class="l" href="#50"> 50: </a><span class="php-comment"> * Style} object.
+</span></span><span id="51" class="l"><a class="l" href="#51"> 51: </a><span class="php-comment"> *
+</span></span><span id="52" class="l"><a class="l" href="#52"> 52: </a><span class="php-comment"> * Style information is loaded and parsed (see {@link Stylesheet}) and is
+</span></span><span id="53" class="l"><a class="l" href="#53"> 53: </a><span class="php-comment"> * applied to the frames in the tree by using XPath.  CSS selectors are
+</span></span><span id="54" class="l"><a class="l" href="#54"> 54: </a><span class="php-comment"> * converted into XPath queries, and the computed {@link Style} objects are
+</span></span><span id="55" class="l"><a class="l" href="#55"> 55: </a><span class="php-comment"> * applied to the {@link Frame}s.
+</span></span><span id="56" class="l"><a class="l" href="#56"> 56: </a><span class="php-comment"> *
+</span></span><span id="57" class="l"><a class="l" href="#57"> 57: </a><span class="php-comment"> * {@link Frame}s are then decorated (in the design pattern sense of the
+</span></span><span id="58" class="l"><a class="l" href="#58"> 58: </a><span class="php-comment"> * word) based on their CSS display property ({@link
+</span></span><span id="59" class="l"><a class="l" href="#59"> 59: </a><span class="php-comment"> * http://www.w3.org/TR/CSS21/visuren.html#propdef-display}).
+</span></span><span id="60" class="l"><a class="l" href="#60"> 60: </a><span class="php-comment"> * Frame_Decorators augment the basic {@link Frame} class by adding
+</span></span><span id="61" class="l"><a class="l" href="#61"> 61: </a><span class="php-comment"> * additional properties and methods specific to the particular type of
+</span></span><span id="62" class="l"><a class="l" href="#62"> 62: </a><span class="php-comment"> * {@link Frame}.  For example, in the CSS layout model, block frames
+</span></span><span id="63" class="l"><a class="l" href="#63"> 63: </a><span class="php-comment"> * (display: block;) contain line boxes that are usually filled with text or
+</span></span><span id="64" class="l"><a class="l" href="#64"> 64: </a><span class="php-comment"> * other inline frames.  The Block_Frame_Decorator therefore adds a $lines
+</span></span><span id="65" class="l"><a class="l" href="#65"> 65: </a><span class="php-comment"> * property as well as methods to add {@link Frame}s to lines and to add
+</span></span><span id="66" class="l"><a class="l" href="#66"> 66: </a><span class="php-comment"> * additional lines.  {@link Frame}s also are attached to specific
+</span></span><span id="67" class="l"><a class="l" href="#67"> 67: </a><span class="php-comment"> * Positioner and {@link Frame_Reflower} objects that contain the
+</span></span><span id="68" class="l"><a class="l" href="#68"> 68: </a><span class="php-comment"> * positioining and layout algorithm for a specific type of frame,
+</span></span><span id="69" class="l"><a class="l" href="#69"> 69: </a><span class="php-comment"> * respectively.  This is an application of the Strategy pattern.
+</span></span><span id="70" class="l"><a class="l" href="#70"> 70: </a><span class="php-comment"> *
+</span></span><span id="71" class="l"><a class="l" href="#71"> 71: </a><span class="php-comment"> * Layout, or reflow, proceeds recursively (post-order) starting at the root
+</span></span><span id="72" class="l"><a class="l" href="#72"> 72: </a><span class="php-comment"> * of the document.  Space constraints (containing block width &amp; height) are
+</span></span><span id="73" class="l"><a class="l" href="#73"> 73: </a><span class="php-comment"> * pushed down, and resolved positions and sizes bubble up.  Thus, every
+</span></span><span id="74" class="l"><a class="l" href="#74"> 74: </a><span class="php-comment"> * {@link Frame} in the document tree is traversed once (except for tables
+</span></span><span id="75" class="l"><a class="l" href="#75"> 75: </a><span class="php-comment"> * which use a two-pass layout algorithm).  If you are interested in the
+</span></span><span id="76" class="l"><a class="l" href="#76"> 76: </a><span class="php-comment"> * details, see the reflow() method of the Reflower classes.
+</span></span><span id="77" class="l"><a class="l" href="#77"> 77: </a><span class="php-comment"> * 
+</span></span><span id="78" class="l"><a class="l" href="#78"> 78: </a><span class="php-comment"> * Rendering is relatively straightforward once layout is complete. {@link
+</span></span><span id="79" class="l"><a class="l" href="#79"> 79: </a><span class="php-comment"> * Frame}s are rendered using an adapted {@link Cpdf} class, originally
+</span></span><span id="80" class="l"><a class="l" href="#80"> 80: </a><span class="php-comment"> * written by Wayne Munro, http://www.ros.co.nz/pdf/.  (Some performance
+</span></span><span id="81" class="l"><a class="l" href="#81"> 81: </a><span class="php-comment"> * related changes have been made to the original {@link Cpdf} class, and
+</span></span><span id="82" class="l"><a class="l" href="#82"> 82: </a><span class="php-comment"> * the {@link CPDF_Adapter} class provides a simple, stateless interface to
+</span></span><span id="83" class="l"><a class="l" href="#83"> 83: </a><span class="php-comment"> * PDF generation.)  PDFLib support has now also been added, via the {@link
+</span></span><span id="84" class="l"><a class="l" href="#84"> 84: </a><span class="php-comment"> * PDFLib_Adapter}.
+</span></span><span id="85" class="l"><a class="l" href="#85"> 85: </a><span class="php-comment"> *
+</span></span><span id="86" class="l"><a class="l" href="#86"> 86: </a><span class="php-comment"> *
+</span></span><span id="87" class="l"><a class="l" href="#87"> 87: </a><span class="php-comment"> * @package dompdf
+</span></span><span id="88" class="l"><a class="l" href="#88"> 88: </a><span class="php-comment"> */</span>
+</span><span id="89" class="l"><a class="l" href="#89"> 89: </a><span class="php-keyword1">class</span> <a id="DOMPDF" href="#DOMPDF">DOMPDF</a> {
+</span><span id="90" class="l"><a class="l" href="#90"> 90: </a>  
+</span><span id="91" class="l"><a class="l" href="#91"> 91: </a>  
+</span><span id="92" class="l"><a class="l" href="#92"> 92: </a>  <span class="php-comment">/**
+</span></span><span id="93" class="l"><a class="l" href="#93"> 93: </a><span class="php-comment">   * DomDocument representing the HTML document
+</span></span><span id="94" class="l"><a class="l" href="#94"> 94: </a><span class="php-comment">   *
+</span></span><span id="95" class="l"><a class="l" href="#95"> 95: </a><span class="php-comment">   * @var DomDocument
+</span></span><span id="96" class="l"><a class="l" href="#96"> 96: </a><span class="php-comment">   */</span>
+</span><span id="97" class="l"><a class="l" href="#97"> 97: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_xml" href="#$_xml">$_xml</a></span>;
+</span><span id="98" class="l"><a class="l" href="#98"> 98: </a>
+</span><span id="99" class="l"><a class="l" href="#99"> 99: </a>  <span class="php-comment">/**
+</span></span><span id="100" class="l"><a class="l" href="#100">100: </a><span class="php-comment">   * Frame_Tree derived from the DOM tree
+</span></span><span id="101" class="l"><a class="l" href="#101">101: </a><span class="php-comment">   *
+</span></span><span id="102" class="l"><a class="l" href="#102">102: </a><span class="php-comment">   * @var Frame_Tree
+</span></span><span id="103" class="l"><a class="l" href="#103">103: </a><span class="php-comment">   */</span>
+</span><span id="104" class="l"><a class="l" href="#104">104: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_tree" href="#$_tree">$_tree</a></span>;
+</span><span id="105" class="l"><a class="l" href="#105">105: </a>
+</span><span id="106" class="l"><a class="l" href="#106">106: </a>  <span class="php-comment">/**
+</span></span><span id="107" class="l"><a class="l" href="#107">107: </a><span class="php-comment">   * Stylesheet for the document
+</span></span><span id="108" class="l"><a class="l" href="#108">108: </a><span class="php-comment">   *
+</span></span><span id="109" class="l"><a class="l" href="#109">109: </a><span class="php-comment">   * @var Stylesheet
+</span></span><span id="110" class="l"><a class="l" href="#110">110: </a><span class="php-comment">   */</span>
+</span><span id="111" class="l"><a class="l" href="#111">111: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_css" href="#$_css">$_css</a></span>;
+</span><span id="112" class="l"><a class="l" href="#112">112: </a>
+</span><span id="113" class="l"><a class="l" href="#113">113: </a>  <span class="php-comment">/**
+</span></span><span id="114" class="l"><a class="l" href="#114">114: </a><span class="php-comment">   * Actual PDF renderer
+</span></span><span id="115" class="l"><a class="l" href="#115">115: </a><span class="php-comment">   *
+</span></span><span id="116" class="l"><a class="l" href="#116">116: </a><span class="php-comment">   * @var Canvas
+</span></span><span id="117" class="l"><a class="l" href="#117">117: </a><span class="php-comment">   */</span>
+</span><span id="118" class="l"><a class="l" href="#118">118: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_pdf" href="#$_pdf">$_pdf</a></span>;
+</span><span id="119" class="l"><a class="l" href="#119">119: </a>
+</span><span id="120" class="l"><a class="l" href="#120">120: </a>  <span class="php-comment">/**
+</span></span><span id="121" class="l"><a class="l" href="#121">121: </a><span class="php-comment">   * Desired paper size ('letter', 'legal', 'A4', etc.)
+</span></span><span id="122" class="l"><a class="l" href="#122">122: </a><span class="php-comment">   *
+</span></span><span id="123" class="l"><a class="l" href="#123">123: </a><span class="php-comment">   * @var string
+</span></span><span id="124" class="l"><a class="l" href="#124">124: </a><span class="php-comment">   */</span>
+</span><span id="125" class="l"><a class="l" href="#125">125: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_paper_size" href="#$_paper_size">$_paper_size</a></span>;
+</span><span id="126" class="l"><a class="l" href="#126">126: </a>
+</span><span id="127" class="l"><a class="l" href="#127">127: </a>  <span class="php-comment">/**
+</span></span><span id="128" class="l"><a class="l" href="#128">128: </a><span class="php-comment">   * Paper orientation ('portrait' or 'landscape')
+</span></span><span id="129" class="l"><a class="l" href="#129">129: </a><span class="php-comment">   *
+</span></span><span id="130" class="l"><a class="l" href="#130">130: </a><span class="php-comment">   * @var string
+</span></span><span id="131" class="l"><a class="l" href="#131">131: </a><span class="php-comment">   */</span>
+</span><span id="132" class="l"><a class="l" href="#132">132: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_paper_orientation" href="#$_paper_orientation">$_paper_orientation</a></span>;
+</span><span id="133" class="l"><a class="l" href="#133">133: </a>
+</span><span id="134" class="l"><a class="l" href="#134">134: </a>  <span class="php-keyword1">private</span> <span class="php-var"><a id="$_cache_id" href="#$_cache_id">$_cache_id</a></span>;
+</span><span id="135" class="l"><a class="l" href="#135">135: </a>
+</span><span id="136" class="l"><a class="l" href="#136">136: </a>  <span class="php-comment">/**
+</span></span><span id="137" class="l"><a class="l" href="#137">137: </a><span class="php-comment">   * Base hostname
+</span></span><span id="138" class="l"><a class="l" href="#138">138: </a><span class="php-comment">   *
+</span></span><span id="139" class="l"><a class="l" href="#139">139: </a><span class="php-comment">   * Used for relative paths/urls
+</span></span><span id="140" class="l"><a class="l" href="#140">140: </a><span class="php-comment">   * @var string
+</span></span><span id="141" class="l"><a class="l" href="#141">141: </a><span class="php-comment">   */</span>
+</span><span id="142" class="l"><a class="l" href="#142">142: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_base_host" href="#$_base_host">$_base_host</a></span>;
+</span><span id="143" class="l"><a class="l" href="#143">143: </a>
+</span><span id="144" class="l"><a class="l" href="#144">144: </a>  <span class="php-comment">/**
+</span></span><span id="145" class="l"><a class="l" href="#145">145: </a><span class="php-comment">   * Absolute base path
+</span></span><span id="146" class="l"><a class="l" href="#146">146: </a><span class="php-comment">   *
+</span></span><span id="147" class="l"><a class="l" href="#147">147: </a><span class="php-comment">   * Used for relative paths/urls
+</span></span><span id="148" class="l"><a class="l" href="#148">148: </a><span class="php-comment">   * @var string
+</span></span><span id="149" class="l"><a class="l" href="#149">149: </a><span class="php-comment">   */</span>
+</span><span id="150" class="l"><a class="l" href="#150">150: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_base_path" href="#$_base_path">$_base_path</a></span>;
+</span><span id="151" class="l"><a class="l" href="#151">151: </a>
+</span><span id="152" class="l"><a class="l" href="#152">152: </a>  <span class="php-comment">/**
+</span></span><span id="153" class="l"><a class="l" href="#153">153: </a><span class="php-comment">   * Protcol used to request file (file://, http://, etc)
+</span></span><span id="154" class="l"><a class="l" href="#154">154: </a><span class="php-comment">   *
+</span></span><span id="155" class="l"><a class="l" href="#155">155: </a><span class="php-comment">   * @var string
+</span></span><span id="156" class="l"><a class="l" href="#156">156: </a><span class="php-comment">   */</span>
+</span><span id="157" class="l"><a class="l" href="#157">157: </a>  <span class="php-keyword1">protected</span> <span class="php-var"><a id="$_protocol" href="#$_protocol">$_protocol</a></span>;
+</span><span id="158" class="l"><a class="l" href="#158">158: </a>  
+</span><span id="159" class="l"><a class="l" href="#159">159: </a>
+</span><span id="160" class="l"><a class="l" href="#160">160: </a>  <span class="php-comment">/**
+</span></span><span id="161" class="l"><a class="l" href="#161">161: </a><span class="php-comment">   * Class constructor
+</span></span><span id="162" class="l"><a class="l" href="#162">162: </a><span class="php-comment">   */</span>
+</span><span id="163" class="l"><a class="l" href="#163">163: </a>  <span class="php-keyword1">function</span> <a id="___construct" href="#___construct">__construct</a>() {
+</span><span id="164" class="l"><a class="l" href="#164">164: </a>    <span class="php-var">$this</span>-&gt;_messages = <span class="php-keyword1">array</span>();
+</span><span id="165" class="l"><a class="l" href="#165">165: </a>    <span class="php-var">$this</span>-&gt;_xml = <span class="php-keyword1">new</span> DomDocument();
+</span><span id="166" class="l"><a class="l" href="#166">166: </a>    <span class="php-var">$this</span>-&gt;_xml-&gt;preserveWhiteSpace = <span class="php-keyword1">true</span>;
+</span><span id="167" class="l"><a class="l" href="#167">167: </a>    <span class="php-var">$this</span>-&gt;_tree = <span class="php-keyword1">new</span> Frame_Tree(<span class="php-var">$this</span>-&gt;_xml);
+</span><span id="168" class="l"><a class="l" href="#168">168: </a>    <span class="php-var">$this</span>-&gt;_css = <span class="php-keyword1">new</span> Stylesheet();
+</span><span id="169" class="l"><a class="l" href="#169">169: </a>    <span class="php-var">$this</span>-&gt;_pdf = <span class="php-keyword1">null</span>;
+</span><span id="170" class="l"><a class="l" href="#170">170: </a>    <span class="php-var">$this</span>-&gt;_paper_size = <span class="php-quote">&quot;letter&quot;</span>;
+</span><span id="171" class="l"><a class="l" href="#171">171: </a>    <span class="php-var">$this</span>-&gt;_paper_orientation = <span class="php-quote">&quot;portrait&quot;</span>;
+</span><span id="172" class="l"><a class="l" href="#172">172: </a>    <span class="php-var">$this</span>-&gt;_base_host = <span class="php-quote">&quot;&quot;</span>;
+</span><span id="173" class="l"><a class="l" href="#173">173: </a>    <span class="php-var">$this</span>-&gt;_base_path = <span class="php-quote">&quot;&quot;</span>;
+</span><span id="174" class="l"><a class="l" href="#174">174: </a>    <span class="php-var">$this</span>-&gt;_cache_id = <span class="php-keyword1">null</span>;
+</span><span id="175" class="l"><a class="l" href="#175">175: </a>  }
+</span><span id="176" class="l"><a class="l" href="#176">176: </a>
+</span><span id="177" class="l"><a class="l" href="#177">177: </a>  <span class="php-comment">/**
+</span></span><span id="178" class="l"><a class="l" href="#178">178: </a><span class="php-comment">   * Returns the underlying {@link Frame_Tree} object
+</span></span><span id="179" class="l"><a class="l" href="#179">179: </a><span class="php-comment">   *
+</span></span><span id="180" class="l"><a class="l" href="#180">180: </a><span class="php-comment">   * @return Frame_Tree
+</span></span><span id="181" class="l"><a class="l" href="#181">181: </a><span class="php-comment">   */</span>
+</span><span id="182" class="l"><a class="l" href="#182">182: </a>  <span class="php-keyword1">function</span> <a id="_get_tree" href="#_get_tree">get_tree</a>() { <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_tree; }
+</span><span id="183" class="l"><a class="l" href="#183">183: </a>
+</span><span id="184" class="l"><a class="l" href="#184">184: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="185" class="l"><a class="l" href="#185">185: </a>
+</span><span id="186" class="l"><a class="l" href="#186">186: </a>  <span class="php-comment">/**
+</span></span><span id="187" class="l"><a class="l" href="#187">187: </a><span class="php-comment">   * Sets the protocol to use
+</span></span><span id="188" class="l"><a class="l" href="#188">188: </a><span class="php-comment">   *
+</span></span><span id="189" class="l"><a class="l" href="#189">189: </a><span class="php-comment">   * @param string $proto
+</span></span><span id="190" class="l"><a class="l" href="#190">190: </a><span class="php-comment">   */</span>
+</span><span id="191" class="l"><a class="l" href="#191">191: </a>  <span class="php-comment">// FIXME: validate these</span>
+</span><span id="192" class="l"><a class="l" href="#192">192: </a>  <span class="php-keyword1">function</span> <a id="_set_protocol" href="#_set_protocol">set_protocol</a>(<span class="php-var">$proto</span>) { <span class="php-var">$this</span>-&gt;_protocol = <span class="php-var">$proto</span>; }
+</span><span id="193" class="l"><a class="l" href="#193">193: </a>
+</span><span id="194" class="l"><a class="l" href="#194">194: </a>  <span class="php-comment">/**
+</span></span><span id="195" class="l"><a class="l" href="#195">195: </a><span class="php-comment">   * Sets the base hostname
+</span></span><span id="196" class="l"><a class="l" href="#196">196: </a><span class="php-comment">   *
+</span></span><span id="197" class="l"><a class="l" href="#197">197: </a><span class="php-comment">   * @param string $host
+</span></span><span id="198" class="l"><a class="l" href="#198">198: </a><span class="php-comment">   */</span>
+</span><span id="199" class="l"><a class="l" href="#199">199: </a>  <span class="php-keyword1">function</span> <a id="_set_host" href="#_set_host">set_host</a>(<span class="php-var">$host</span>) { <span class="php-var">$this</span>-&gt;_base_host = <span class="php-var">$host</span>; }
+</span><span id="200" class="l"><a class="l" href="#200">200: </a>
+</span><span id="201" class="l"><a class="l" href="#201">201: </a>  <span class="php-comment">/**
+</span></span><span id="202" class="l"><a class="l" href="#202">202: </a><span class="php-comment">   * Sets the base path
+</span></span><span id="203" class="l"><a class="l" href="#203">203: </a><span class="php-comment">   *
+</span></span><span id="204" class="l"><a class="l" href="#204">204: </a><span class="php-comment">   * @param string $path
+</span></span><span id="205" class="l"><a class="l" href="#205">205: </a><span class="php-comment">   */</span>
+</span><span id="206" class="l"><a class="l" href="#206">206: </a>  <span class="php-keyword1">function</span> <a id="_set_base_path" href="#_set_base_path">set_base_path</a>(<span class="php-var">$path</span>) { <span class="php-var">$this</span>-&gt;_base_path = <span class="php-var">$path</span>; }
+</span><span id="207" class="l"><a class="l" href="#207">207: </a>
+</span><span id="208" class="l"><a class="l" href="#208">208: </a>  <span class="php-comment">/**
+</span></span><span id="209" class="l"><a class="l" href="#209">209: </a><span class="php-comment">   * Returns the protocol in use
+</span></span><span id="210" class="l"><a class="l" href="#210">210: </a><span class="php-comment">   *
+</span></span><span id="211" class="l"><a class="l" href="#211">211: </a><span class="php-comment">   * @return string
+</span></span><span id="212" class="l"><a class="l" href="#212">212: </a><span class="php-comment">   */</span>
+</span><span id="213" class="l"><a class="l" href="#213">213: </a>  <span class="php-keyword1">function</span> <a id="_get_protocol" href="#_get_protocol">get_protocol</a>() { <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_protocol; }
+</span><span id="214" class="l"><a class="l" href="#214">214: </a>
+</span><span id="215" class="l"><a class="l" href="#215">215: </a>  <span class="php-comment">/**
+</span></span><span id="216" class="l"><a class="l" href="#216">216: </a><span class="php-comment">   * Returns the base hostname
+</span></span><span id="217" class="l"><a class="l" href="#217">217: </a><span class="php-comment">   *
+</span></span><span id="218" class="l"><a class="l" href="#218">218: </a><span class="php-comment">   * @return string
+</span></span><span id="219" class="l"><a class="l" href="#219">219: </a><span class="php-comment">   */</span>
+</span><span id="220" class="l"><a class="l" href="#220">220: </a>  <span class="php-keyword1">function</span> <a id="_get_host" href="#_get_host">get_host</a>() { <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_base_host; }
+</span><span id="221" class="l"><a class="l" href="#221">221: </a>
+</span><span id="222" class="l"><a class="l" href="#222">222: </a>  <span class="php-comment">/**
+</span></span><span id="223" class="l"><a class="l" href="#223">223: </a><span class="php-comment">   * Returns the base path
+</span></span><span id="224" class="l"><a class="l" href="#224">224: </a><span class="php-comment">   *
+</span></span><span id="225" class="l"><a class="l" href="#225">225: </a><span class="php-comment">   * @return string
+</span></span><span id="226" class="l"><a class="l" href="#226">226: </a><span class="php-comment">   */</span>
+</span><span id="227" class="l"><a class="l" href="#227">227: </a>  <span class="php-keyword1">function</span> <a id="_get_base_path" href="#_get_base_path">get_base_path</a>() { <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_base_path; }
+</span><span id="228" class="l"><a class="l" href="#228">228: </a>  
+</span><span id="229" class="l"><a class="l" href="#229">229: </a>  <span class="php-comment">/**
+</span></span><span id="230" class="l"><a class="l" href="#230">230: </a><span class="php-comment">   * Return the underlying Canvas instance (e.g. CPDF_Adapter, GD_Adapter)
+</span></span><span id="231" class="l"><a class="l" href="#231">231: </a><span class="php-comment">   *
+</span></span><span id="232" class="l"><a class="l" href="#232">232: </a><span class="php-comment">   * @return Canvas
+</span></span><span id="233" class="l"><a class="l" href="#233">233: </a><span class="php-comment">   */</span>
+</span><span id="234" class="l"><a class="l" href="#234">234: </a>  <span class="php-keyword1">function</span> <a id="_get_canvas" href="#_get_canvas">get_canvas</a>() { <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_pdf; }
+</span><span id="235" class="l"><a class="l" href="#235">235: </a>  
+</span><span id="236" class="l"><a class="l" href="#236">236: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="237" class="l"><a class="l" href="#237">237: </a>
+</span><span id="238" class="l"><a class="l" href="#238">238: </a>  <span class="php-comment">/**
+</span></span><span id="239" class="l"><a class="l" href="#239">239: </a><span class="php-comment">   * Loads an HTML file
+</span></span><span id="240" class="l"><a class="l" href="#240">240: </a><span class="php-comment">   *
+</span></span><span id="241" class="l"><a class="l" href="#241">241: </a><span class="php-comment">   * Parse errors are stored in the global array _dompdf_warnings.
+</span></span><span id="242" class="l"><a class="l" href="#242">242: </a><span class="php-comment">   *
+</span></span><span id="243" class="l"><a class="l" href="#243">243: </a><span class="php-comment">   * @param string $file a filename or url to load
+</span></span><span id="244" class="l"><a class="l" href="#244">244: </a><span class="php-comment">   */</span>
+</span><span id="245" class="l"><a class="l" href="#245">245: </a>  <span class="php-keyword1">function</span> <a id="_load_html_file" href="#_load_html_file">load_html_file</a>(<span class="php-var">$file</span>) {
+</span><span id="246" class="l"><a class="l" href="#246">246: </a>    <span class="php-comment">// Store parsing warnings as messages (this is to prevent output to the</span>
+</span><span id="247" class="l"><a class="l" href="#247">247: </a>    <span class="php-comment">// browser if the html is ugly and the dom extension complains,</span>
+</span><span id="248" class="l"><a class="l" href="#248">248: </a>    <span class="php-comment">// preventing the pdf from being streamed.)</span>
+</span><span id="249" class="l"><a class="l" href="#249">249: </a>    <span class="php-keyword1">list</span>(<span class="php-var">$this</span>-&gt;_protocol, <span class="php-var">$this</span>-&gt;_base_host, <span class="php-var">$this</span>-&gt;_base_path) = explode_url(<span class="php-var">$file</span>);
+</span><span id="250" class="l"><a class="l" href="#250">250: </a>    
+</span><span id="251" class="l"><a class="l" href="#251">251: </a>    <span class="php-keyword1">if</span> ( !DOMPDF_ENABLE_REMOTE &amp;&amp;
+</span><span id="252" class="l"><a class="l" href="#252">252: </a>         (<span class="php-var">$this</span>-&gt;_protocol != <span class="php-quote">&quot;&quot;</span> &amp;&amp; <span class="php-var">$this</span>-&gt;_protocol != <span class="php-quote">&quot;file://&quot;</span> ) )
+</span><span id="253" class="l"><a class="l" href="#253">253: </a>      <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> DOMPDF_Exception(<span class="php-quote">&quot;Remote file requested, but DOMPDF_ENABLE_REMOTE is false.&quot;</span>);
+</span><span id="254" class="l"><a class="l" href="#254">254: </a>         
+</span><span id="255" class="l"><a class="l" href="#255">255: </a>    <span class="php-keyword1">if</span> ( !DOMPDF_ENABLE_PHP ) {
+</span><span id="256" class="l"><a class="l" href="#256">256: </a>      <span class="php-keyword2">set_error_handler</span>(<span class="php-quote">&quot;record_warnings&quot;</span>);
+</span><span id="257" class="l"><a class="l" href="#257">257: </a>      <span class="php-var">$this</span>-&gt;_xml-&gt;loadHTMLFile(<span class="php-var">$file</span>);
+</span><span id="258" class="l"><a class="l" href="#258">258: </a>      <span class="php-keyword2">restore_error_handler</span>();
+</span><span id="259" class="l"><a class="l" href="#259">259: </a>
+</span><span id="260" class="l"><a class="l" href="#260">260: </a>    } <span class="php-keyword1">else</span>
+</span><span id="261" class="l"><a class="l" href="#261">261: </a>      <span class="php-var">$this</span>-&gt;load_html(<span class="php-keyword2">file_get_contents</span>(<span class="php-var">$file</span>));
+</span><span id="262" class="l"><a class="l" href="#262">262: </a>
+</span><span id="263" class="l"><a class="l" href="#263">263: </a>  }
+</span><span id="264" class="l"><a class="l" href="#264">264: </a>
+</span><span id="265" class="l"><a class="l" href="#265">265: </a>  <span class="php-comment">/**
+</span></span><span id="266" class="l"><a class="l" href="#266">266: </a><span class="php-comment">   * Loads an HTML string
+</span></span><span id="267" class="l"><a class="l" href="#267">267: </a><span class="php-comment">   *
+</span></span><span id="268" class="l"><a class="l" href="#268">268: </a><span class="php-comment">   * Parse errors are stored in the global array _dompdf_warnings.
+</span></span><span id="269" class="l"><a class="l" href="#269">269: </a><span class="php-comment">   *
+</span></span><span id="270" class="l"><a class="l" href="#270">270: </a><span class="php-comment">   * @param string $str HTML text to load
+</span></span><span id="271" class="l"><a class="l" href="#271">271: </a><span class="php-comment">   */</span>
+</span><span id="272" class="l"><a class="l" href="#272">272: </a>  <span class="php-keyword1">function</span> <a id="_load_html" href="#_load_html">load_html</a>(<span class="php-var">$str</span>) {
+</span><span id="273" class="l"><a class="l" href="#273">273: </a>
+</span><span id="274" class="l"><a class="l" href="#274">274: </a>    <span class="php-comment">// Parse embedded php, first-pass</span>
+</span><span id="275" class="l"><a class="l" href="#275">275: </a>    <span class="php-keyword1">if</span> ( DOMPDF_ENABLE_PHP ) {
+</span><span id="276" class="l"><a class="l" href="#276">276: </a>      <span class="php-keyword2">ob_start</span>();
+</span><span id="277" class="l"><a class="l" href="#277">277: </a>      <span class="php-keyword2">eval</span>(<span class="php-quote">&quot;?&quot;</span> . <span class="php-quote">&quot;&gt;</span><span class="php-var">$str</span><span class="php-quote">&quot;</span>);
+</span><span id="278" class="l"><a class="l" href="#278">278: </a>      <span class="php-var">$str</span> = <span class="php-keyword2">ob_get_contents</span>();      
+</span><span id="279" class="l"><a class="l" href="#279">279: </a>      <span class="php-keyword2">ob_end_clean</span>();
+</span><span id="280" class="l"><a class="l" href="#280">280: </a>    }
+</span><span id="281" class="l"><a class="l" href="#281">281: </a>
+</span><span id="282" class="l"><a class="l" href="#282">282: </a>    <span class="php-comment">// Store parsing warnings as messages</span>
+</span><span id="283" class="l"><a class="l" href="#283">283: </a>    <span class="php-keyword2">set_error_handler</span>(<span class="php-quote">&quot;record_warnings&quot;</span>);
+</span><span id="284" class="l"><a class="l" href="#284">284: </a>    <span class="php-var">$this</span>-&gt;_xml-&gt;loadHTML(<span class="php-var">$str</span>);
+</span><span id="285" class="l"><a class="l" href="#285">285: </a>    <span class="php-keyword2">restore_error_handler</span>();
+</span><span id="286" class="l"><a class="l" href="#286">286: </a>  }
+</span><span id="287" class="l"><a class="l" href="#287">287: </a>
+</span><span id="288" class="l"><a class="l" href="#288">288: </a>  <span class="php-comment">/**
+</span></span><span id="289" class="l"><a class="l" href="#289">289: </a><span class="php-comment">   * Builds the {@link Frame_Tree}, loads any CSS and applies the styles to
+</span></span><span id="290" class="l"><a class="l" href="#290">290: </a><span class="php-comment">   * the {@link Frame_Tree}
+</span></span><span id="291" class="l"><a class="l" href="#291">291: </a><span class="php-comment">   */</span>
+</span><span id="292" class="l"><a class="l" href="#292">292: </a>  <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="__process_html" href="#__process_html">_process_html</a>() {
+</span><span id="293" class="l"><a class="l" href="#293">293: </a>    <span class="php-var">$this</span>-&gt;_tree-&gt;build_tree();
+</span><span id="294" class="l"><a class="l" href="#294">294: </a>    
+</span><span id="295" class="l"><a class="l" href="#295">295: </a>    <span class="php-var">$this</span>-&gt;_css-&gt;load_css_file(Stylesheet::DEFAULT_STYLESHEET);    
+</span><span id="296" class="l"><a class="l" href="#296">296: </a>
+</span><span id="297" class="l"><a class="l" href="#297">297: </a>    <span class="php-comment">// load &lt;link rel=&quot;STYLESHEET&quot; ... /&gt; tags</span>
+</span><span id="298" class="l"><a class="l" href="#298">298: </a>    <span class="php-var">$links</span> = <span class="php-var">$this</span>-&gt;_xml-&gt;getElementsByTagName(<span class="php-quote">&quot;link&quot;</span>);    
+</span><span id="299" class="l"><a class="l" href="#299">299: </a>    <span class="php-keyword1">foreach</span> (<span class="php-var">$links</span> <span class="php-keyword1">as</span> <span class="php-var">$link</span>) {
+</span><span id="300" class="l"><a class="l" href="#300">300: </a>      <span class="php-keyword1">if</span> ( <span class="php-keyword2">mb_strtolower</span>(<span class="php-var">$link</span>-&gt;getAttribute(<span class="php-quote">&quot;rel&quot;</span>)) == <span class="php-quote">&quot;stylesheet&quot;</span> ||
+</span><span id="301" class="l"><a class="l" href="#301">301: </a>           <span class="php-keyword2">mb_strtolower</span>(<span class="php-var">$link</span>-&gt;getAttribute(<span class="php-quote">&quot;type&quot;</span>)) == <span class="php-quote">&quot;text/css&quot;</span> ) {
+</span><span id="302" class="l"><a class="l" href="#302">302: </a>        <span class="php-var">$url</span> = <span class="php-var">$link</span>-&gt;getAttribute(<span class="php-quote">&quot;href&quot;</span>);
+</span><span id="303" class="l"><a class="l" href="#303">303: </a>        <span class="php-var">$url</span> = build_url(<span class="php-var">$this</span>-&gt;_protocol, <span class="php-var">$this</span>-&gt;_base_host, <span class="php-var">$this</span>-&gt;_base_path, <span class="php-var">$url</span>);
+</span><span id="304" class="l"><a class="l" href="#304">304: </a>        
+</span><span id="305" class="l"><a class="l" href="#305">305: </a>        <span class="php-var">$this</span>-&gt;_css-&gt;load_css_file(<span class="php-var">$url</span>);
+</span><span id="306" class="l"><a class="l" href="#306">306: </a>      }
+</span><span id="307" class="l"><a class="l" href="#307">307: </a>
+</span><span id="308" class="l"><a class="l" href="#308">308: </a>    }
+</span><span id="309" class="l"><a class="l" href="#309">309: </a>
+</span><span id="310" class="l"><a class="l" href="#310">310: </a>    <span class="php-comment">// load &lt;style&gt; tags</span>
+</span><span id="311" class="l"><a class="l" href="#311">311: </a>    <span class="php-var">$styles</span> = <span class="php-var">$this</span>-&gt;_xml-&gt;getElementsByTagName(<span class="php-quote">&quot;style&quot;</span>);
+</span><span id="312" class="l"><a class="l" href="#312">312: </a>    <span class="php-keyword1">foreach</span> (<span class="php-var">$styles</span> <span class="php-keyword1">as</span> <span class="php-var">$style</span>) {
+</span><span id="313" class="l"><a class="l" href="#313">313: </a>
+</span><span id="314" class="l"><a class="l" href="#314">314: </a>      <span class="php-comment">// Accept all &lt;style&gt; tags by default (note this is contrary to W3C</span>
+</span><span id="315" class="l"><a class="l" href="#315">315: </a>      <span class="php-comment">// HTML 4.0 spec:</span>
+</span><span id="316" class="l"><a class="l" href="#316">316: </a>      <span class="php-comment">// http://www.w3.org/TR/REC-html40/present/styles.html#adef-media</span>
+</span><span id="317" class="l"><a class="l" href="#317">317: </a>      <span class="php-comment">// which states that the default media type is 'screen'</span>
+</span><span id="318" class="l"><a class="l" href="#318">318: </a>      <span class="php-keyword1">if</span> ( <span class="php-var">$style</span>-&gt;hasAttributes() &amp;&amp;
+</span><span id="319" class="l"><a class="l" href="#319">319: </a>           (<span class="php-var">$media</span> = <span class="php-var">$style</span>-&gt;getAttribute(<span class="php-quote">&quot;media&quot;</span>)) &amp;&amp;
+</span><span id="320" class="l"><a class="l" href="#320">320: </a>           !<span class="php-keyword2">in_array</span>(<span class="php-var">$media</span>, Stylesheet::<span class="php-var">$ACCEPTED_MEDIA_TYPES</span>) )
+</span><span id="321" class="l"><a class="l" href="#321">321: </a>        <span class="php-keyword1">continue</span>;
+</span><span id="322" class="l"><a class="l" href="#322">322: </a>      
+</span><span id="323" class="l"><a class="l" href="#323">323: </a>      <span class="php-var">$css</span> = <span class="php-quote">&quot;&quot;</span>;
+</span><span id="324" class="l"><a class="l" href="#324">324: </a>      <span class="php-keyword1">if</span> ( <span class="php-var">$style</span>-&gt;hasChildNodes() ) {
+</span><span id="325" class="l"><a class="l" href="#325">325: </a>        
+</span><span id="326" class="l"><a class="l" href="#326">326: </a>        <span class="php-var">$child</span> = <span class="php-var">$style</span>-&gt;firstChild;
+</span><span id="327" class="l"><a class="l" href="#327">327: </a>        <span class="php-keyword1">while</span> ( <span class="php-var">$child</span> ) {
+</span><span id="328" class="l"><a class="l" href="#328">328: </a>          <span class="php-var">$css</span> .= <span class="php-var">$child</span>-&gt;nodeValue; <span class="php-comment">// Handle &lt;style&gt;&lt;!-- blah --&gt;&lt;/style&gt;</span>
+</span><span id="329" class="l"><a class="l" href="#329">329: </a>          <span class="php-var">$child</span> = <span class="php-var">$child</span>-&gt;nextSibling;
+</span><span id="330" class="l"><a class="l" href="#330">330: </a>        }
+</span><span id="331" class="l"><a class="l" href="#331">331: </a>        
+</span><span id="332" class="l"><a class="l" href="#332">332: </a>      } <span class="php-keyword1">else</span>
+</span><span id="333" class="l"><a class="l" href="#333">333: </a>        <span class="php-var">$css</span> = <span class="php-var">$style</span>-&gt;nodeValue;
+</span><span id="334" class="l"><a class="l" href="#334">334: </a>
+</span><span id="335" class="l"><a class="l" href="#335">335: </a>      <span class="php-comment">// Set the base path of the Stylesheet to that of the file being processed</span>
+</span><span id="336" class="l"><a class="l" href="#336">336: </a>      <span class="php-var">$this</span>-&gt;_css-&gt;set_protocol(<span class="php-var">$this</span>-&gt;_protocol);
+</span><span id="337" class="l"><a class="l" href="#337">337: </a>      <span class="php-var">$this</span>-&gt;_css-&gt;set_host(<span class="php-var">$this</span>-&gt;_base_host);
+</span><span id="338" class="l"><a class="l" href="#338">338: </a>      <span class="php-var">$this</span>-&gt;_css-&gt;set_base_path(<span class="php-var">$this</span>-&gt;_base_path);
+</span><span id="339" class="l"><a class="l" href="#339">339: </a>
+</span><span id="340" class="l"><a class="l" href="#340">340: </a>      <span class="php-var">$this</span>-&gt;_css-&gt;load_css(<span class="php-var">$css</span>);
+</span><span id="341" class="l"><a class="l" href="#341">341: </a>    }
+</span><span id="342" class="l"><a class="l" href="#342">342: </a>    
+</span><span id="343" class="l"><a class="l" href="#343">343: </a>  }
+</span><span id="344" class="l"><a class="l" href="#344">344: </a>
+</span><span id="345" class="l"><a class="l" href="#345">345: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="346" class="l"><a class="l" href="#346">346: </a>
+</span><span id="347" class="l"><a class="l" href="#347">347: </a>  <span class="php-comment">/**
+</span></span><span id="348" class="l"><a class="l" href="#348">348: </a><span class="php-comment">   * Sets the paper size &amp; orientation
+</span></span><span id="349" class="l"><a class="l" href="#349">349: </a><span class="php-comment">   *
+</span></span><span id="350" class="l"><a class="l" href="#350">350: </a><span class="php-comment">   * @param string $size 'letter', 'legal', 'A4', etc. {@link CPDF_Adapter::$PAPER_SIZES}
+</span></span><span id="351" class="l"><a class="l" href="#351">351: </a><span class="php-comment">   * @param string $orientation 'portrait' or 'landscape'
+</span></span><span id="352" class="l"><a class="l" href="#352">352: </a><span class="php-comment">   */</span>
+</span><span id="353" class="l"><a class="l" href="#353">353: </a>  <span class="php-keyword1">function</span> <a id="_set_paper" href="#_set_paper">set_paper</a>(<span class="php-var">$size</span>, <span class="php-var">$orientation</span> = <span class="php-quote">&quot;portrait&quot;</span>) {
+</span><span id="354" class="l"><a class="l" href="#354">354: </a>    <span class="php-var">$this</span>-&gt;_paper_size = <span class="php-var">$size</span>;
+</span><span id="355" class="l"><a class="l" href="#355">355: </a>    <span class="php-var">$this</span>-&gt;_paper_orientation = <span class="php-var">$orientation</span>;
+</span><span id="356" class="l"><a class="l" href="#356">356: </a>  }
+</span><span id="357" class="l"><a class="l" href="#357">357: </a>  
+</span><span id="358" class="l"><a class="l" href="#358">358: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="359" class="l"><a class="l" href="#359">359: </a>
+</span><span id="360" class="l"><a class="l" href="#360">360: </a>  <span class="php-comment">/**
+</span></span><span id="361" class="l"><a class="l" href="#361">361: </a><span class="php-comment">   * Enable experimental caching capability
+</span></span><span id="362" class="l"><a class="l" href="#362">362: </a><span class="php-comment">   * @access private
+</span></span><span id="363" class="l"><a class="l" href="#363">363: </a><span class="php-comment">   */</span>
+</span><span id="364" class="l"><a class="l" href="#364">364: </a>  <span class="php-keyword1">function</span> <a id="_enable_caching" href="#_enable_caching">enable_caching</a>(<span class="php-var">$cache_id</span>) {
+</span><span id="365" class="l"><a class="l" href="#365">365: </a>    <span class="php-var">$this</span>-&gt;_cache_id = <span class="php-var">$cache_id</span>;
+</span><span id="366" class="l"><a class="l" href="#366">366: </a>  }
+</span><span id="367" class="l"><a class="l" href="#367">367: </a>  
+</span><span id="368" class="l"><a class="l" href="#368">368: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="369" class="l"><a class="l" href="#369">369: </a>
+</span><span id="370" class="l"><a class="l" href="#370">370: </a>  <span class="php-comment">/**
+</span></span><span id="371" class="l"><a class="l" href="#371">371: </a><span class="php-comment">   * Renders the HTML to PDF
+</span></span><span id="372" class="l"><a class="l" href="#372">372: </a><span class="php-comment">   */</span>
+</span><span id="373" class="l"><a class="l" href="#373">373: </a>  <span class="php-keyword1">function</span> <a id="_render" href="#_render">render</a>() {
+</span><span id="374" class="l"><a class="l" href="#374">374: </a>
+</span><span id="375" class="l"><a class="l" href="#375">375: </a>    <span class="php-comment">//enable_mem_profile();</span>
+</span><span id="376" class="l"><a class="l" href="#376">376: </a>    
+</span><span id="377" class="l"><a class="l" href="#377">377: </a>    <span class="php-var">$this</span>-&gt;_process_html();
+</span><span id="378" class="l"><a class="l" href="#378">378: </a>
+</span><span id="379" class="l"><a class="l" href="#379">379: </a>    <span class="php-var">$this</span>-&gt;_css-&gt;apply_styles(<span class="php-var">$this</span>-&gt;_tree);
+</span><span id="380" class="l"><a class="l" href="#380">380: </a>
+</span><span id="381" class="l"><a class="l" href="#381">381: </a>    <span class="php-var">$root</span> = <span class="php-keyword1">null</span>;
+</span><span id="382" class="l"><a class="l" href="#382">382: </a>    
+</span><span id="383" class="l"><a class="l" href="#383">383: </a>    <span class="php-keyword1">foreach</span> (<span class="php-var">$this</span>-&gt;_tree-&gt;get_frames() <span class="php-keyword1">as</span> <span class="php-var">$frame</span>) {
+</span><span id="384" class="l"><a class="l" href="#384">384: </a>
+</span><span id="385" class="l"><a class="l" href="#385">385: </a>      <span class="php-comment">// Set up the root frame</span>
+</span><span id="386" class="l"><a class="l" href="#386">386: </a>      <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_null</span>(<span class="php-var">$root</span>) ) {
+</span><span id="387" class="l"><a class="l" href="#387">387: </a>        <span class="php-var">$root</span> = Frame_Factory::decorate_root( <span class="php-var">$this</span>-&gt;_tree-&gt;get_root(), <span class="php-var">$this</span> );
+</span><span id="388" class="l"><a class="l" href="#388">388: </a>        <span class="php-keyword1">continue</span>;
+</span><span id="389" class="l"><a class="l" href="#389">389: </a>      }
+</span><span id="390" class="l"><a class="l" href="#390">390: </a>
+</span><span id="391" class="l"><a class="l" href="#391">391: </a>      <span class="php-comment">// Create the appropriate decorators, reflowers &amp; positioners.</span>
+</span><span id="392" class="l"><a class="l" href="#392">392: </a>      <span class="php-var">$deco</span> = Frame_Factory::decorate_frame(<span class="php-var">$frame</span>, <span class="php-var">$this</span>);
+</span><span id="393" class="l"><a class="l" href="#393">393: </a>      <span class="php-var">$deco</span>-&gt;set_root(<span class="php-var">$root</span>);
+</span><span id="394" class="l"><a class="l" href="#394">394: </a>
+</span><span id="395" class="l"><a class="l" href="#395">395: </a>      <span class="php-comment">// FIXME: handle generated content</span>
+</span><span id="396" class="l"><a class="l" href="#396">396: </a>      <span class="php-keyword1">if</span> ( <span class="php-var">$frame</span>-&gt;get_style()-&gt;display == <span class="php-quote">&quot;list-item&quot;</span> ) {
+</span><span id="397" class="l"><a class="l" href="#397">397: </a>        
+</span><span id="398" class="l"><a class="l" href="#398">398: </a>        <span class="php-comment">// Insert a list-bullet frame</span>
+</span><span id="399" class="l"><a class="l" href="#399">399: </a>        <span class="php-var">$node</span> = <span class="php-var">$this</span>-&gt;_xml-&gt;createElement(<span class="php-quote">&quot;bullet&quot;</span>); <span class="php-comment">// arbitrary choice</span>
+</span><span id="400" class="l"><a class="l" href="#400">400: </a>        <span class="php-var">$b_f</span> = <span class="php-keyword1">new</span> Frame(<span class="php-var">$node</span>);
+</span><span id="401" class="l"><a class="l" href="#401">401: </a>
+</span><span id="402" class="l"><a class="l" href="#402">402: </a>        <span class="php-var">$style</span> = <span class="php-var">$this</span>-&gt;_css-&gt;create_style();
+</span><span id="403" class="l"><a class="l" href="#403">403: </a>        <span class="php-var">$style</span>-&gt;display = <span class="php-quote">&quot;-dompdf-list-bullet&quot;</span>;
+</span><span id="404" class="l"><a class="l" href="#404">404: </a>        <span class="php-var">$style</span>-&gt;inherit(<span class="php-var">$frame</span>-&gt;get_style());
+</span><span id="405" class="l"><a class="l" href="#405">405: </a>        <span class="php-var">$b_f</span>-&gt;set_style(<span class="php-var">$style</span>);
+</span><span id="406" class="l"><a class="l" href="#406">406: </a>        
+</span><span id="407" class="l"><a class="l" href="#407">407: </a>        <span class="php-var">$deco</span>-&gt;prepend_child( Frame_Factory::decorate_frame(<span class="php-var">$b_f</span>, <span class="php-var">$this</span>) );
+</span><span id="408" class="l"><a class="l" href="#408">408: </a>      }
+</span><span id="409" class="l"><a class="l" href="#409">409: </a>    }
+</span><span id="410" class="l"><a class="l" href="#410">410: </a>    
+</span><span id="411" class="l"><a class="l" href="#411">411: </a>    <span class="php-var">$this</span>-&gt;_pdf = Canvas_Factory::get_instance(<span class="php-var">$this</span>-&gt;_paper_size, <span class="php-var">$this</span>-&gt;_paper_orientation);
+</span><span id="412" class="l"><a class="l" href="#412">412: </a>
+</span><span id="413" class="l"><a class="l" href="#413">413: </a>    <span class="php-var">$root</span>-&gt;set_containing_block(<span class="php-num">0</span>, <span class="php-num">0</span>, <span class="php-var">$this</span>-&gt;_pdf-&gt;get_width(), <span class="php-var">$this</span>-&gt;_pdf-&gt;get_height());
+</span><span id="414" class="l"><a class="l" href="#414">414: </a>    <span class="php-var">$root</span>-&gt;set_renderer(<span class="php-keyword1">new</span> Renderer(<span class="php-var">$this</span>));
+</span><span id="415" class="l"><a class="l" href="#415">415: </a>    
+</span><span id="416" class="l"><a class="l" href="#416">416: </a>    <span class="php-comment">// This is where the magic happens:</span>
+</span><span id="417" class="l"><a class="l" href="#417">417: </a>    <span class="php-var">$root</span>-&gt;reflow();
+</span><span id="418" class="l"><a class="l" href="#418">418: </a>    
+</span><span id="419" class="l"><a class="l" href="#419">419: </a>    <span class="php-comment">// Clean up cached images</span>
+</span><span id="420" class="l"><a class="l" href="#420">420: </a>    Image_Cache::clear();
+</span><span id="421" class="l"><a class="l" href="#421">421: </a>  }
+</span><span id="422" class="l"><a class="l" href="#422">422: </a>    
+</span><span id="423" class="l"><a class="l" href="#423">423: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="424" class="l"><a class="l" href="#424">424: </a>
+</span><span id="425" class="l"><a class="l" href="#425">425: </a>  <span class="php-comment">/**
+</span></span><span id="426" class="l"><a class="l" href="#426">426: </a><span class="php-comment">   * Streams the PDF to the client
+</span></span><span id="427" class="l"><a class="l" href="#427">427: </a><span class="php-comment">   *
+</span></span><span id="428" class="l"><a class="l" href="#428">428: </a><span class="php-comment">   * The file will open a download dialog by default.  The options
+</span></span><span id="429" class="l"><a class="l" href="#429">429: </a><span class="php-comment">   * parameter controls the output headers.  Accepted headers are:
+</span></span><span id="430" class="l"><a class="l" href="#430">430: </a><span class="php-comment">   *
+</span></span><span id="431" class="l"><a class="l" href="#431">431: </a><span class="php-comment">   * 'Accept-Ranges' =&gt; 1 or 0 - if this is not set to 1, then this
+</span></span><span id="432" class="l"><a class="l" href="#432">432: </a><span class="php-comment">   *    header is not included, off by default this header seems to
+</span></span><span id="433" class="l"><a class="l" href="#433">433: </a><span class="php-comment">   *    have caused some problems despite tha fact that it is supposed
+</span></span><span id="434" class="l"><a class="l" href="#434">434: </a><span class="php-comment">   *    to solve them, so I am leaving it off by default.
+</span></span><span id="435" class="l"><a class="l" href="#435">435: </a><span class="php-comment">   *
+</span></span><span id="436" class="l"><a class="l" href="#436">436: </a><span class="php-comment">   * 'compress' = &gt; 1 or 0 - apply content stream compression, this is
+</span></span><span id="437" class="l"><a class="l" href="#437">437: </a><span class="php-comment">   *    on (1) by default
+</span></span><span id="438" class="l"><a class="l" href="#438">438: </a><span class="php-comment">   *
+</span></span><span id="439" class="l"><a class="l" href="#439">439: </a><span class="php-comment">   * 'Attachment' =&gt; 1 or 0 - if 1, force the browser to open a
+</span></span><span id="440" class="l"><a class="l" href="#440">440: </a><span class="php-comment">   *    download dialog, on (1) by default
+</span></span><span id="441" class="l"><a class="l" href="#441">441: </a><span class="php-comment">   *
+</span></span><span id="442" class="l"><a class="l" href="#442">442: </a><span class="php-comment">   * @param string $filename the name of the streamed file
+</span></span><span id="443" class="l"><a class="l" href="#443">443: </a><span class="php-comment">   * @param array  $options header options (see above)
+</span></span><span id="444" class="l"><a class="l" href="#444">444: </a><span class="php-comment">   */</span>
+</span><span id="445" class="l"><a class="l" href="#445">445: </a>  <span class="php-keyword1">function</span> <a id="_stream" href="#_stream">stream</a>(<span class="php-var">$filename</span>, <span class="php-var">$options</span> = <span class="php-keyword1">null</span>) {
+</span><span id="446" class="l"><a class="l" href="#446">446: </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_null</span>(<span class="php-var">$this</span>-&gt;_pdf))
+</span><span id="447" class="l"><a class="l" href="#447">447: </a>      <span class="php-var">$this</span>-&gt;_pdf-&gt;stream(<span class="php-var">$filename</span>, <span class="php-var">$options</span>);
+</span><span id="448" class="l"><a class="l" href="#448">448: </a>  }
+</span><span id="449" class="l"><a class="l" href="#449">449: </a>
+</span><span id="450" class="l"><a class="l" href="#450">450: </a>  <span class="php-comment">/**
+</span></span><span id="451" class="l"><a class="l" href="#451">451: </a><span class="php-comment">   * Returns the PDF as a string
+</span></span><span id="452" class="l"><a class="l" href="#452">452: </a><span class="php-comment">   *
+</span></span><span id="453" class="l"><a class="l" href="#453">453: </a><span class="php-comment">   * @return string
+</span></span><span id="454" class="l"><a class="l" href="#454">454: </a><span class="php-comment">   */</span>
+</span><span id="455" class="l"><a class="l" href="#455">455: </a>  <span class="php-keyword1">function</span> <a id="_output" href="#_output">output</a>() {
+</span><span id="456" class="l"><a class="l" href="#456">456: </a>    <span class="php-keyword1">global</span> <span class="php-var">$_dompdf_debug</span>;
+</span><span id="457" class="l"><a class="l" href="#457">457: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_null</span>(<span class="php-var">$this</span>-&gt;_pdf) )
+</span><span id="458" class="l"><a class="l" href="#458">458: </a>      <span class="php-keyword1">return</span> <span class="php-keyword1">null</span>;
+</span><span id="459" class="l"><a class="l" href="#459">459: </a>    
+</span><span id="460" class="l"><a class="l" href="#460">460: </a>    <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_pdf-&gt;output( <span class="php-var">$_dompdf_debug</span> );
+</span><span id="461" class="l"><a class="l" href="#461">461: </a>  }
+</span><span id="462" class="l"><a class="l" href="#462">462: </a>  
+</span><span id="463" class="l"><a class="l" href="#463">463: </a>  <span class="php-comment">//........................................................................ </span>
+</span><span id="464" class="l"><a class="l" href="#464">464: </a>  
+</span><span id="465" class="l"><a class="l" href="#465">465: </a>}
+</span><span id="466" class="l"><a class="l" href="#466">466: </a></span><span class="xlang">?&gt;</span></code></pre>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

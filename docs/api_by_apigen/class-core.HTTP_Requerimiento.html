@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class core\HTTP_Requerimiento | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li class="active"><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-core.Aplicacion.html">Aplicacion</a></li>
+				<li><a href="class-core.Array_Datos.html">Array_Datos</a></li>
+				<li><a href="class-core.Autoloader.html">Autoloader</a></li>
+				<li><a href="class-core.Clase_Base.html">Clase_Base</a></li>
+				<li><a href="class-core.Configuracion.html">Configuracion</a></li>
+				<li><a href="class-core.Controlador.html">Controlador</a></li>
+				<li><a href="class-core.Conversiones.html">Conversiones</a></li>
+				<li><a href="class-core.Datos.html">Datos</a></li>
+				<li><a href="class-core.Distribuidor.html">Distribuidor</a></li>
+				<li><a href="class-core.HTML_Tag.html">HTML_Tag</a></li>
+				<li class="active"><a href="class-core.HTTP_Requerimiento.html">HTTP_Requerimiento</a></li>
+				<li><a href="class-core.HTTP_Respuesta.html">HTTP_Respuesta</a></li>
+				<li><a href="class-core.Random_String.html">Random_String</a></li>
+				<li><a href="class-core.Rutas.html">Rutas</a></li>
+				<li><a href="class-core.SESSION.html">SESSION</a></li>
+				<li><a href="class-core.URL.html">URL</a></li>
+				<li><a href="class-core.Usuario.html">Usuario</a></li>
+				<li><a href="class-core.Validaciones.html">Validaciones</a></li>
+				<li><a href="class-core.Vista.html">Vista</a></li>
+				<li><a href="class-core.Vista_Plantilla.html">Vista_Plantilla</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-core.html" title="Summary of core"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class HTTP_Requerimiento</h1>
+
+
+	<div class="description">
+	
+<p>Contiene funciones para tratar la información recibida desde el navegador
+web mediante HTTP, utilizando las variables predefinidas de php que forman parte
+del Common Gateway Interface (CGI).</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-core.html">core</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-core.HTTP_Requerimiento.html#11-155" title="Go to source code">app/core/http_requerimiento.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="request" id="_request">
+
+		<td class="attributes"><code>
+			 public static
+			null|string|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_request">#</a>
+		<code><a href="source-class-core.HTTP_Requerimiento.html#18-47" title="Go to source code">request</a>( <span>null|string <var>$indice</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>request($indice) devuelve el contenido de un índice del array
+$_REQUEST[$indice] si existe esa entrada y no es una cadena vacía. request()
+devuelve el array $_REQUEST (se llama a la función sin parámetros). Devuelve
+un null si $indice no existe en $_REQUEST o si existe y es una cadena vacía, de
+longitud cero strlen($_REQUEST[$indice])==0 Devuelve un string que será el
+contenido de la entrada $_REQUEST[$indice] Devuelve un array que sera el propio
+$_REQUEST si se llama sin parámetros Si se le pasa un parámetro no string
+devuelve un <b>Fatal error</b></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>request($indice) devuelve el contenido de un índice del array
+$_REQUEST[$indice] si existe esa entrada y no es una cadena vacía. request()
+devuelve el array $_REQUEST (se llama a la función sin parámetros). Devuelve
+un null si $indice no existe en $_REQUEST o si existe y es una cadena vacía, de
+longitud cero strlen($_REQUEST[$indice])==0 Devuelve un string que será el
+contenido de la entrada $_REQUEST[$indice] Devuelve un array que sera el propio
+$_REQUEST si se llama sin parámetros Si se le pasa un parámetro no string
+devuelve un <b>Fatal error</b></p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indice</var></dt>
+					<dd><code>null|string</code><br>$indice</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|string|array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public static
+			null|string|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-core.HTTP_Requerimiento.html#49-78" title="Go to source code">get</a>( <span>null|string <var>$indice</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>get($indice) devuelve el contenido de un índice del array $_GET[$indice] si
+existe esa entrada y no es una cadena vacía. get() devuelve el array $_GET (se
+llama a la función sin parámetros). Devuelve un null si $indice no existe en
+$_GET o si existe y es una cadena vacía, de longitud cero
+strlen($_GET[$indice])==0 Devuelve un string que será el contenido de la
+entrada $_GET[$indice] Devuelve un array que sera el propio $_GET si se llama
+sin parámetros Si se le pasa un parámetro no string devuelve un <b>Fatal
+error</b></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>get($indice) devuelve el contenido de un índice del array $_GET[$indice] si
+existe esa entrada y no es una cadena vacía. get() devuelve el array $_GET (se
+llama a la función sin parámetros). Devuelve un null si $indice no existe en
+$_GET o si existe y es una cadena vacía, de longitud cero
+strlen($_GET[$indice])==0 Devuelve un string que será el contenido de la
+entrada $_GET[$indice] Devuelve un array que sera el propio $_GET si se llama
+sin parámetros Si se le pasa un parámetro no string devuelve un <b>Fatal
+error</b></p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indice</var></dt>
+					<dd><code>null|string</code><br>$indice</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|string|array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="post" id="_post">
+
+		<td class="attributes"><code>
+			 public static
+			null|string|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_post">#</a>
+		<code><a href="source-class-core.HTTP_Requerimiento.html#80-111" title="Go to source code">post</a>( <span>null|string <var>$indice</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>post($indice) devuelve el contenido de un índice del array $_POST[$indice]
+si existe esa entrada y no es una cadena vacía. post() devuelve el array $_POST
+(se llama a la función sin parámetros). Devuelve un null si $indice no existe
+en $_POST o si existe y es una cadena vacía, de longitud cero
+strlen($_POST[$indice])==0 Devuelve un string que será el contenido de la
+entrada $_POST[$indice] Devuelve un array que sera el propio $_POST si se llama
+sin parámetros Si se le pasa un parámetro no string devuelve un <b>Fatal
+error</b></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>post($indice) devuelve el contenido de un índice del array $_POST[$indice]
+si existe esa entrada y no es una cadena vacía. post() devuelve el array $_POST
+(se llama a la función sin parámetros). Devuelve un null si $indice no existe
+en $_POST o si existe y es una cadena vacía, de longitud cero
+strlen($_POST[$indice])==0 Devuelve un string que será el contenido de la
+entrada $_POST[$indice] Devuelve un array que sera el propio $_POST si se llama
+sin parámetros Si se le pasa un parámetro no string devuelve un <b>Fatal
+error</b></p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indice</var></dt>
+					<dd><code>null|string</code><br>$indice</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|string|array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookie" id="_cookie">
+
+		<td class="attributes"><code>
+			 public static
+			null|string|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cookie">#</a>
+		<code><a href="source-class-core.HTTP_Requerimiento.html#113-145" title="Go to source code">cookie</a>( <span>null|string <var>$indice</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>cookie($indice) devuelve el contenido de un índice del array
+$_COOKIE[$indice] si existe esa entrada y no es una cadena vacía. cookie()
+devuelve el array $_COOKIE (se llama a la función sin parámetros). Devuelve un
+null si $indice no existe en $_COOKIE o si existe y es una cadena vacía, de
+longitud cero strlen($_COOKIE[$indice])==0 Devuelve un string que será el
+contenido de la entrada $_COOKIE[$indice] Devuelve un array que sera el propio
+$_COOKIE si se llama sin parámetros Si se le pasa un parámetro no string
+devuelve un <b>Fatal error</b></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>cookie($indice) devuelve el contenido de un índice del array
+$_COOKIE[$indice] si existe esa entrada y no es una cadena vacía. cookie()
+devuelve el array $_COOKIE (se llama a la función sin parámetros). Devuelve un
+null si $indice no existe en $_COOKIE o si existe y es una cadena vacía, de
+longitud cero strlen($_COOKIE[$indice])==0 Devuelve un string que será el
+contenido de la entrada $_COOKIE[$indice] Devuelve un array que sera el propio
+$_COOKIE si se llama sin parámetros Si se le pasa un parámetro no string
+devuelve un <b>Fatal error</b></p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indice</var></dt>
+					<dd><code>null|string</code><br>$indice</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>null|string|array</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="method" id="_method">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_method">#</a>
+		<code><a href="source-class-core.HTTP_Requerimiento.html#149-153" title="Go to source code">method</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

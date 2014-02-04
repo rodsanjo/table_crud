@@ -73,6 +73,11 @@ class Tabla extends \core\Controlador {
     public function form_modificar(array $datos = array()) {
 
         $datos["form_name"] = __FUNCTION__;
+        
+        If ( ! \core\HTTP_Requerimiento::method()== 'POST'){
+            $datos['mensaje']="No se pueden añadir datos en la URL de foma manual";
+            \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
+        }
 
         if ( ! isset($datos["errores"])) { // Si no es un reenvío desde una validación fallida
             $validaciones=array(
@@ -144,6 +149,12 @@ class Tabla extends \core\Controlador {
     public function form_borrar(array $datos=array()) {
 
             $datos["form_name"] = __FUNCTION__;
+            
+            If ( ! \core\HTTP_Requerimiento::method()== 'POST'){
+                $datos['mensaje']="No se pueden añadir datos en la URL de foma manual";
+                \core\Distribuidor::cargar_controlador('mensajes', 'mensaje', $datos);
+            }
+            
             $validaciones=array(
                     "id" => "errores_requerido && errores_numero_entero_positivo && errores_referencia:id/".self::$tabla."/id"
             );
@@ -202,7 +213,13 @@ class Tabla extends \core\Controlador {
             }
 
     }
-
+    
+    /**
+     * Fución que realiza las conversiones de los campos usados en está aplicación al formato utilizado por MySQL.
+     * Convertimos a formato MySQL
+     * 
+     * @param array $param Se corresponderá por regla general con datos['values'] y lo pasamos por referencia, para que modificque el valor
+     */
     private static function convertir_a_formato_mysql(array &$param) {  //$param = datos['values'] y lo pasamos por referencia, para que modificque el valor        
         $param['masa_atomica'] = \core\Conversiones::decimal_puntoOcoma_a_punto($param['masa_atomica']);
         $param['fecha_salida'] = \core\Conversiones::fecha_es_a_mysql($param['fecha_salida']);

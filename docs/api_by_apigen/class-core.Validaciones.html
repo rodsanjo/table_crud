@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class core\Validaciones | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li class="active"><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-core.Aplicacion.html">Aplicacion</a></li>
+				<li><a href="class-core.Array_Datos.html">Array_Datos</a></li>
+				<li><a href="class-core.Autoloader.html">Autoloader</a></li>
+				<li><a href="class-core.Clase_Base.html">Clase_Base</a></li>
+				<li><a href="class-core.Configuracion.html">Configuracion</a></li>
+				<li><a href="class-core.Controlador.html">Controlador</a></li>
+				<li><a href="class-core.Conversiones.html">Conversiones</a></li>
+				<li><a href="class-core.Datos.html">Datos</a></li>
+				<li><a href="class-core.Distribuidor.html">Distribuidor</a></li>
+				<li><a href="class-core.HTML_Tag.html">HTML_Tag</a></li>
+				<li><a href="class-core.HTTP_Requerimiento.html">HTTP_Requerimiento</a></li>
+				<li><a href="class-core.HTTP_Respuesta.html">HTTP_Respuesta</a></li>
+				<li><a href="class-core.Random_String.html">Random_String</a></li>
+				<li><a href="class-core.Rutas.html">Rutas</a></li>
+				<li><a href="class-core.SESSION.html">SESSION</a></li>
+				<li><a href="class-core.URL.html">URL</a></li>
+				<li><a href="class-core.Usuario.html">Usuario</a></li>
+				<li class="active"><a href="class-core.Validaciones.html">Validaciones</a></li>
+				<li><a href="class-core.Vista.html">Vista</a></li>
+				<li><a href="class-core.Vista_Plantilla.html">Vista_Plantilla</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-core.html" title="Summary of core"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Validaciones</h1>
+
+
+	<div class="description">
+	
+<p>Validaciones para contenidos de parámetros enviados por el cliente mediante
+POST o GET, que serán los contenidos de columnas que se van a insertar en la
+base de datos.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-core.html">core</a><br>
+		
+
+				<b>Author:</b>
+				Jesús María de Quevedo Tomé &lt;<a
+href="mailto:jequeto&#64;gmail.com">jequeto&#64;<!-- -->gmail.com</a>&gt;<br>
+				<b>Since:</b>
+				20130130<br>
+		<b>Located at</b> <a href="source-class-core.Validaciones.html#4-642" title="Go to source code">app/core/validaciones.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="errores_validacion_request" id="_errores_validacion_request">
+
+		<td class="attributes"><code>
+			 public static
+			array(&quot;values&quot;=&gt;array(&quot;parametro&quot;=&gt;valor,...),&quot;errores&quot;=&gt;array(&quot;parametro&quot;=&gt;&quot;mesaje&amp;nbsp;de&amp;nbsp;errore&quot;,...)
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_validacion_request">#</a>
+		<code><a href="source-class-core.Validaciones.html#77-199" title="Go to source code">errores_validacion_request</a>( <span>array <var>$validaciones</var></span>, <span>array <var>&amp; $datos</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			Valida los datos que se indiquen en $parametros a partir de las funciones de
+validación. Los datos son tomados del $_REQUEST que está almacenado en el
+objeto $this-&gt;aplicacion-&gt;request. Un parámetro del request puede ser
+validado por más de una función, por lo que se podrá incorporar al array de
+parámetros una o más veces.<br />
+La función devuelve un array con dos índices:
+<ul></ul>
+
+<ul></ul>
+  Se considera la validación correcta si el array retornado está vacío en la
+clave errores.<br />
+
+		</div>
+
+		<div class="description detailed hidden">
+			Valida los datos que se indiquen en $parametros a partir de las funciones de
+validación. Los datos son tomados del $_REQUEST que está almacenado en el
+objeto $this-&gt;aplicacion-&gt;request. Un parámetro del request puede ser
+validado por más de una función, por lo que se podrá incorporar al array de
+parámetros una o más veces.<br />
+La función devuelve un array con dos índices:
+<ul></ul>
+
+<ul></ul>
+  Se considera la validación correcta si el array retornado está vacío en la
+clave errores.<br />
+Formatos para <b>funcion_validacion</b> podran ser:
+<ul>
+	<li>funcion_validacion</li>
+
+	<li>funcion_validacion_lista:(opcion1,opcion2, ..)</li>
+
+	<li>funcion_validacion_lista:(opcion1;opcion2; ..) si alguna de las opciones
+	incluye ,</li>
+
+	<li>funcion_validacion:request_index1,
+	request_index2,.../nombre_tabla_referencia/columna1, columna2, .... Este formato
+	se empleará para errores_unicidad y para errores_referencia</li>
+</ul>
+ Si se aporta el array $datos, como parámetro, entonces la función incorpora
+en dicho array los elementos [values] y [errores], y retorna false si no hay
+errores y true si los hay. Si no está este parámetro la función devuelve un
+array con los dos índices [values] y [errores].
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$validaciones</var></dt>
+					<dd><code>array</code><br>$parametros
+=array("parametro1=&gt;funcion_validacion_a","parametro1=&gt;funcion_validacion_b","parametro2=&gt;funcion_validacion",...)</dd>
+					<dt><var>$datos</var></dt>
+					<dd><code>array</code><br>$datos (por referencia) Si se aporta sobre el se devolverá el array de return y
+el return será count($datos[errores])</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array(&quot;values&quot;=&gt;array(&quot;parametro&quot;=&gt;valor,...),&quot;errores&quot;=&gt;array(&quot;parametro&quot;=&gt;&quot;mesaje&amp;nbsp;de&amp;nbsp;errore&quot;,...)</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="evitar_inyeccion_sql" id="_evitar_inyeccion_sql">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_evitar_inyeccion_sql">#</a>
+		<code><a href="source-class-core.Validaciones.html#218-233" title="Go to source code">evitar_inyeccion_sql</a>( <span>array <var>$input</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Aplica técnicas para evitar la inyección de SQL malicioso</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Aplica técnicas para evitar la inyección de SQL malicioso</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd><code>array</code><br>$datos = array("columna"=&gt;valor, ....)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>$datos = array("columna"=&gt;valor, ....) el mismo array que se pasó como
+parámetro<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_requerido" id="_errores_requerido">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_requerido">#</a>
+		<code><a href="source-class-core.Validaciones.html#235-248" title="Go to source code">errores_requerido</a>( <span>mixed <var>$cadena</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Valida que la cadena no esté vacía</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Valida que la cadena no esté vacía</p>
+
+
+
+
+
+
+				<h4>Autor</h4>
+				<div class="list">
+						<a href="mailto:jequeto&#64;gmail.com">jequeto&#64;<!-- -->gmail.com</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_texto" id="_errores_texto">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_texto">#</a>
+		<code><a href="source-class-core.Validaciones.html#252-263" title="Go to source code">errores_texto</a>( <span>mixed <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Texto: cadena con lun carácter como mínimo</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Texto: cadena con lun carácter como mínimo</p>
+
+
+
+
+
+
+				<h4>Autor</h4>
+				<div class="list">
+						jequeto<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_prohibido_punto_y_coma" id="_errores_prohibido_punto_y_coma">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_prohibido_punto_y_coma">#</a>
+		<code><a href="source-class-core.Validaciones.html#267-276" title="Go to source code">errores_prohibido_punto_y_coma</a>( <span>mixed <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_numero_entero_positivo" id="_errores_numero_entero_positivo">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_numero_entero_positivo">#</a>
+		<code><a href="source-class-core.Validaciones.html#283-299" title="Go to source code">errores_numero_entero_positivo</a>( <span>string <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Un número entero positivo válido, positivo sin signo.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Un número entero positivo válido, positivo sin signo.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>string</code><br>$cadena</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_precio" id="_errores_precio">
+
+		<td class="attributes"><code>
+			 public static
+			boolean|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_precio">#</a>
+		<code><a href="source-class-core.Validaciones.html#303-320" title="Go to source code">errores_precio</a>( <span>string <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Valida un precio en formato europeo, con el . como separador de miles y la ,
+como separador decimal, máximo 2 decimales. También da por válido un número
+sin separador de miles. Ejemplo 10.001,26 10001,26</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Valida un precio en formato europeo, con el . como separador de miles y la ,
+como separador decimal, máximo 2 decimales. También da por válido un número
+sin separador de miles. Ejemplo 10.001,26 10001,26</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>string</code><br>$cadena</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_decimal" id="_errores_decimal">
+
+		<td class="attributes"><code>
+			 public static
+			boolean|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_decimal">#</a>
+		<code><a href="source-class-core.Validaciones.html#322-339" title="Go to source code">errores_decimal</a>( <span>string <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Valida para un número real usando "," o "." como separador decimal. Ejemplo
+21.01526 12.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Valida para un número real usando "," o "." como separador decimal. Ejemplo
+21.01526 12.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>string</code><br>$cadena</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_fecha_hora" id="_errores_fecha_hora">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_fecha_hora">#</a>
+		<code><a href="source-class-core.Validaciones.html#343-366" title="Go to source code">errores_fecha_hora</a>( <span>type <var>$cadena</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Cadena representa una fecha y horas válidas en españa, con el formato
+dd/mm/aaaa hh:mm:ss</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cadena representa una fecha y horas válidas en españa, con el formato
+dd/mm/aaaa hh:mm:ss</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>type</code><br>$cadena</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_fecha" id="_errores_fecha">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_fecha">#</a>
+		<code><a href="source-class-core.Validaciones.html#368-387" title="Go to source code">errores_fecha</a>( <span>type <var>$cadena</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Cadena representa una fecha, con el formato dd/mm/aaaa o aaaa-mm-dd</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cadena representa una fecha, con el formato dd/mm/aaaa o aaaa-mm-dd</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>type</code><br>$cadena</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_identificador" id="_errores_identificador">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_identificador">#</a>
+		<code><a href="source-class-core.Validaciones.html#390-405" title="Go to source code">errores_identificador</a>( <span>string <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Identificador de variables o de claves internas. Solo letras, números y _.
+NO puede empezar por número</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Identificador de variables o de claves internas. Solo letras, números y _.
+NO puede empezar por número</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>string</code><br>$cadena</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_unicidad" id="_errores_unicidad">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_unicidad">#</a>
+		<code><a href="source-class-core.Validaciones.html#410-418" title="Go to source code">errores_unicidad</a>( <span>array <var>$valores</var></span>, <span>type <var>$tabla</var></span>, <span>array <var>$columnas</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Comprueba que los valores pasados no existen en las columnas de la tabla de
+referencia</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Comprueba que los valores pasados no existen en las columnas de la tabla de
+referencia</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$valores</var></dt>
+					<dd><code>array</code><br>$valores array de índice numérico</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>type</code><br>$tabla</dd>
+					<dt><var>$columnas</var></dt>
+					<dd><code>array</code><br>$columnas array de índice numérico</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_unicidad_insertar" id="_errores_unicidad_insertar">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_unicidad_insertar">#</a>
+		<code><a href="source-class-core.Validaciones.html#420-459" title="Go to source code">errores_unicidad_insertar</a>( <span>array <var>$valores</var></span>, <span>type <var>$tabla</var></span>, <span>array <var>$columnas</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Comprueba que los valores pasados no existen en otra fila de la tabla de
+referencia El primer valor debe ser no nulo.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Comprueba que los valores pasados no existen en otra fila de la tabla de
+referencia El primer valor debe ser no nulo.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$valores</var></dt>
+					<dd><code>array</code><br>$valores array de índice numérico</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>type</code><br>$tabla</dd>
+					<dt><var>$columnas</var></dt>
+					<dd><code>array</code><br>$columnas array de índice numérico</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_unicidad_modificar" id="_errores_unicidad_modificar">
+
+		<td class="attributes"><code>
+			 public static
+			false|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_unicidad_modificar">#</a>
+		<code><a href="source-class-core.Validaciones.html#461-503" title="Go to source code">errores_unicidad_modificar</a>( <span>array <var>$valores</var></span>, <span>type <var>$tabla</var></span>, <span>array <var>$columnas</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Comprueba que los valores pasados no existen en las filas de la tabla de
+referencia en otras filas distintas de la fila que se está modificando, de la
+cual se debe aportar la primary key, que es el primer valor y la primera
+columna</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Comprueba que los valores pasados no existen en las filas de la tabla de
+referencia en otras filas distintas de la fila que se está modificando, de la
+cual se debe aportar la primary key, que es el primer valor y la primera
+columna</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$valores</var></dt>
+					<dd><code>array</code><br>$valores array(val_id, val_col1 , val_col2, ..) array de índice numérico</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>type</code><br>$tabla</dd>
+					<dt><var>$columnas</var></dt>
+					<dd><code>array</code><br>$columnas array('id', 'col1' , 'col2', ..) array de índice numérico</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>false|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_referencia" id="_errores_referencia">
+
+		<td class="attributes"><code>
+			 public static
+			false|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_referencia">#</a>
+		<code><a href="source-class-core.Validaciones.html#505-551" title="Go to source code">errores_referencia</a>( <span>array <var>$valores</var></span>, <span>type <var>$tabla</var></span>, <span>array <var>$columnas</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Comprueba la existencia de los valores pasados en las columnas de la tabla de
+referencia. El primer valor debe ser no nulo</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Comprueba la existencia de los valores pasados en las columnas de la tabla de
+referencia. El primer valor debe ser no nulo</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$valores</var></dt>
+					<dd><code>array</code><br>$valores</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>type</code><br>$tabla</dd>
+					<dt><var>$columnas</var></dt>
+					<dd><code>array</code><br>$columnas</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>false|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_login" id="_errores_login">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_login">#</a>
+		<code><a href="source-class-core.Validaciones.html#572-588" title="Go to source code">errores_login</a>( <span>string <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Un login_valido Entre 4 y 20 caracteres letras y números, sin números al
+principio</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Un login_valido Entre 4 y 20 caracteres letras y números, sin números al
+principio</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>string</code><br>$cadena</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_password" id="_errores_password">
+
+		<td class="attributes"><code>
+			 public static
+			boolean|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_password">#</a>
+		<code><a href="source-class-core.Validaciones.html#590-618" title="Go to source code">errores_password</a>( <span>string <var>$cadena</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Una constraseña válida Entre 6 y 20 letras y números debe contener como
+mínimo 2 números.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Una constraseña válida Entre 6 y 20 letras y números debe contener como
+mínimo 2 números.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>string</code><br>$cadena</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean|string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="errores_email" id="_errores_email">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_errores_email">#</a>
+		<code><a href="source-class-core.Validaciones.html#621-639" title="Go to source code">errores_email</a>( <span>mixed <var>$cadena</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="depuracion" id="$depuracion">
+		<td class="attributes"><code>
+			protected static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-core.Validaciones.html#12" title="Go to source code"><var>$depuracion</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$depuracion" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="validacion_por_defecto" id="$validacion_por_defecto">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-core.Validaciones.html#564-567" title="Go to source code"><var>$validacion_por_defecto</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+
+        <span class="php-quote">&quot;id&quot;</span> =&gt; <span class="php-quote">&quot;errores_numero_entero_positivo&quot;</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$validacion_por_defecto" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

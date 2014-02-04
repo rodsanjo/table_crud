@@ -27,7 +27,10 @@ class mensajes extends \core\Controlador {
 			\core\HTTP_Respuesta::set_header_line("location", \core\URL::http_generar("mensajes/mensaje"));
 			\core\HTTP_Respuesta::enviar();
 		}
-		else {		
+		else {	
+                    //"mensaje" (nombre de la función) es un html en la carpeta vistas/errores, me guardo su contenido en $datos['view_contetnt']
+                    //y después lo inserto en la plantilla guardandolo en $http_body
+                    //Por lo general tenemos carpetas en vistas de todos lo controladores y en las estas carpetas de vistas existen archivos php con los nombres de las funciones de la clase
 			$datos['view_content'] = \core\Vista::generar(__FUNCTION__, $datos);
 			$http_body = \core\Vista_Plantilla::generar('plantilla_principal', $datos);
 			\core\HTTP_Respuesta::enviar($http_body);

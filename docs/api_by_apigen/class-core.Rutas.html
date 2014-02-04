@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class core\Rutas | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li class="active"><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-core.Aplicacion.html">Aplicacion</a></li>
+				<li><a href="class-core.Array_Datos.html">Array_Datos</a></li>
+				<li><a href="class-core.Autoloader.html">Autoloader</a></li>
+				<li><a href="class-core.Clase_Base.html">Clase_Base</a></li>
+				<li><a href="class-core.Configuracion.html">Configuracion</a></li>
+				<li><a href="class-core.Controlador.html">Controlador</a></li>
+				<li><a href="class-core.Conversiones.html">Conversiones</a></li>
+				<li><a href="class-core.Datos.html">Datos</a></li>
+				<li><a href="class-core.Distribuidor.html">Distribuidor</a></li>
+				<li><a href="class-core.HTML_Tag.html">HTML_Tag</a></li>
+				<li><a href="class-core.HTTP_Requerimiento.html">HTTP_Requerimiento</a></li>
+				<li><a href="class-core.HTTP_Respuesta.html">HTTP_Respuesta</a></li>
+				<li><a href="class-core.Random_String.html">Random_String</a></li>
+				<li class="active"><a href="class-core.Rutas.html">Rutas</a></li>
+				<li><a href="class-core.SESSION.html">SESSION</a></li>
+				<li><a href="class-core.URL.html">URL</a></li>
+				<li><a href="class-core.Usuario.html">Usuario</a></li>
+				<li><a href="class-core.Validaciones.html">Validaciones</a></li>
+				<li><a href="class-core.Vista.html">Vista</a></li>
+				<li><a href="class-core.Vista_Plantilla.html">Vista_Plantilla</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-core.html" title="Summary of core"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Rutas</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-core.html">core</a><br>
+		
+
+				<b>Author:</b>
+				Jesús María de Quevedo Tomé &lt;<a
+href="mailto:jequeto&#64;gmail.com">jequeto&#64;<!-- -->gmail.com</a>&gt;<br>
+				<b>Since:</b>
+				2013 12 02<br>
+		<b>Located at</b> <a href="source-class-core.Rutas.html#4-111" title="Go to source code">app/core/rutas.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="interpretar_url_amigable" id="_interpretar_url_amigable">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_interpretar_url_amigable">#</a>
+		<code><a href="source-class-core.Rutas.html#11-108" title="Go to source code">interpretar_url_amigable</a>( )</code>
+
+		<div class="description short">
+			
+<p>Si la propiedad \core\Configuracion::$url_amibable es true, y además exites
+fichero .htacces en la carpeta root de la aplicación, y en él RewriteEngine =
+on</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Si la propiedad \core\Configuracion::$url_amibable es true, y además exites
+fichero .htacces en la carpeta root de la aplicación, y en él RewriteEngine =
+on</p>
+
+<p>Este método transfoma la URI /dato1/dato2/dato3/.... En entradas nuevas en
+$_GET y $_REQUEST, llamadas [p1],[p2],[p3], ... a las que se asigna los valores
+dato1, dato2, dato3, ... respectivamente Si no se hubiesen recibido como
+parámetros de URI ?menu=...&amp;submenu=...&amp;id=.... también creará las
+entradas [menu], [submenu] e [id] asignándolas los valores datos1, dato2 y
+dato3 respectivamente.</p>
+
+
+
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						<a href="mailto:jequeto&#64;gmail.com">jequeto&#64;<!-- -->gmail.com</a><br>
+				</div>
+				<h4>Since</h4>
+				<div class="list">
+						125/11/2013<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

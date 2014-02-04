@@ -15,4 +15,5 @@ alojada en mysql con ayuda de una aplicación web escrita en php siguiendo el mo
 controlador.
         </p></li>
         </ol>
+        <img src="<?php echo URL_ROOT; ?>recursos/imagenes/periodic_table.jpg" alt="Tabla periodica de los elementos quimicos" title="Tabla periodica" width="100%"/>
 </div>

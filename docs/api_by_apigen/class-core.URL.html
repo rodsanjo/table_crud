@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class core\URL | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li class="active"><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-core.Aplicacion.html">Aplicacion</a></li>
+				<li><a href="class-core.Array_Datos.html">Array_Datos</a></li>
+				<li><a href="class-core.Autoloader.html">Autoloader</a></li>
+				<li><a href="class-core.Clase_Base.html">Clase_Base</a></li>
+				<li><a href="class-core.Configuracion.html">Configuracion</a></li>
+				<li><a href="class-core.Controlador.html">Controlador</a></li>
+				<li><a href="class-core.Conversiones.html">Conversiones</a></li>
+				<li><a href="class-core.Datos.html">Datos</a></li>
+				<li><a href="class-core.Distribuidor.html">Distribuidor</a></li>
+				<li><a href="class-core.HTML_Tag.html">HTML_Tag</a></li>
+				<li><a href="class-core.HTTP_Requerimiento.html">HTTP_Requerimiento</a></li>
+				<li><a href="class-core.HTTP_Respuesta.html">HTTP_Respuesta</a></li>
+				<li><a href="class-core.Random_String.html">Random_String</a></li>
+				<li><a href="class-core.Rutas.html">Rutas</a></li>
+				<li><a href="class-core.SESSION.html">SESSION</a></li>
+				<li class="active"><a href="class-core.URL.html">URL</a></li>
+				<li><a href="class-core.Usuario.html">Usuario</a></li>
+				<li><a href="class-core.Validaciones.html">Validaciones</a></li>
+				<li><a href="class-core.Vista.html">Vista</a></li>
+				<li><a href="class-core.Vista_Plantilla.html">Vista_Plantilla</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-core.html" title="Summary of core"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class URL</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-core.html">core</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-core.URL.html#5-259" title="Go to source code">app/core/url.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="http" id="_http">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_http">#</a>
+		<code><a href="source-class-core.URL.html#7-26" title="Go to source code">http</a>( <span>string <var>$query_string</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Retorna una URI con el esquema http<br />
+La url no contiene el nombre del fichero index.php<br />
+Ejemplo de URL generada: <a
+href="http://www.servidor.com/?query_string">http://www.servidor.com/?query_string</a>
+<a
+href="http://www.servidor.com/aplicacion/?query_string">http://www.servidor.com/aplicacion/?query_string</a></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retorna una URI con el esquema http<br />
+La url no contiene el nombre del fichero index.php<br />
+Ejemplo de URL generada: <a
+href="http://www.servidor.com/?query_string">http://www.servidor.com/?query_string</a>
+<a
+href="http://www.servidor.com/aplicacion/?query_string">http://www.servidor.com/aplicacion/?query_string</a></p>
+
+<p>No incluye parámetros de administrator ni language</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string</code><br>$query_string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="https" id="_https">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_https">#</a>
+		<code><a href="source-class-core.URL.html#29-43" title="Go to source code">https</a>( <span>string <var>$query_string</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Retorna una URL que requiere protocolo https partiendo de la que recibió la
+petición para ejecutar el index.php.<br />
+La url no contiene el nombre del fichero index.php<br />
+Ejemplo de URL generada: <a
+href="https://www.servidor.com/?query_string">https://www.servidor.com/?query_string</a>
+<a
+href="https://www.servidor.com/aplicacion/?query_string">https://www.servidor.com/aplicacion/?query_string</a></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retorna una URL que requiere protocolo https partiendo de la que recibió la
+petición para ejecutar el index.php.<br />
+La url no contiene el nombre del fichero index.php<br />
+Ejemplo de URL generada: <a
+href="https://www.servidor.com/?query_string">https://www.servidor.com/?query_string</a>
+<a
+href="https://www.servidor.com/aplicacion/?query_string">https://www.servidor.com/aplicacion/?query_string</a></p>
+
+<p>No incluye parámetros de administrator ni language</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string</code><br>$query_string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="generar" id="_generar">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_generar">#</a>
+		<code><a href="source-class-core.URL.html#47-77" title="Go to source code">generar</a>( <span>string|array <var>$query_string</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$withLang</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Devuelve una URL en formato amigable o con parámetros en función del valor
+de la propiedad boolean \core\Configuracion::$url_amigable. Construye la url
+incluyendo el idioma en función del parámetro $withLang y siempre que el
+idioma sea distinto del idioma por defecto de la aplicación
+(\core\Configuracion::$idioma_por_defecto).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Devuelve una URL en formato amigable o con parámetros en función del valor
+de la propiedad boolean \core\Configuracion::$url_amigable. Construye la url
+incluyendo el idioma en función del parámetro $withLang y siempre que el
+idioma sea distinto del idioma por defecto de la aplicación
+(\core\Configuracion::$idioma_por_defecto).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string|array</code><br>$query_string "dato1/dato2[/...]" array("dato1", "dato2", ...)</dd>
+					<dt><var>$withLang</var></dt>
+					<dd><code>boolean</code><br>$withLang=true genera ulr con idioma <b>false</b> genera url sin idioma</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>URL amigable o con parámetros<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br>Si el strin no cumple el formato<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="http_generar" id="_http_generar">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_http_generar">#</a>
+		<code><a href="source-class-core.URL.html#83-87" title="Go to source code">http_generar</a>( <span>mixed <var>$query_string</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$withLang</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$withLang</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="https_generar" id="_https_generar">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_https_generar">#</a>
+		<code><a href="source-class-core.URL.html#91-96" title="Go to source code">https_generar</a>( <span>mixed <var>$query_string</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$withLang</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$withLang</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="http_root" id="_http_root">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_http_root">#</a>
+		<code><a href="source-class-core.URL.html#99-109" title="Go to source code">http_root</a>( <span>string <var>$query_string</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Genera una url absoluta que no incluye administrator ni idioma, con esquema
+http.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Genera una url absoluta que no incluye administrator ni idioma, con esquema
+http.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string</code><br>$query_string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="https_root" id="_https_root">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_https_root">#</a>
+		<code><a href="source-class-core.URL.html#112-123" title="Go to source code">https_root</a>( <span>string <var>$query_string</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Genera una url absoluta que no incluye administrator ni idioma, con esquema
+https.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Genera una url absoluta que no incluye administrator ni idioma, con esquema
+https.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string</code><br>$query_string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="generar_con_idioma" id="_generar_con_idioma">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_generar_con_idioma">#</a>
+		<code><a href="source-class-core.URL.html#128-138" title="Go to source code">generar_con_idioma</a>( <span>string <var>$query_string</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Genera una url absoluta con administrator e idioma, con esquema http.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Genera una url absoluta con administrator e idioma, con esquema http.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string</code><br>$query_string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="generar_sin_idioma" id="_generar_sin_idioma">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_generar_sin_idioma">#</a>
+		<code><a href="source-class-core.URL.html#140-150" title="Go to source code">generar_sin_idioma</a>( <span>string <var>$query_string</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Genera una url absoluta con administrator y sin idioma, con esquema http.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Genera una url absoluta con administrator y sin idioma, con esquema http.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query_string</var></dt>
+					<dd><code>string</code><br>$query_string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registrar" id="_registrar">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registrar">#</a>
+		<code><a href="source-class-core.URL.html#213-235" title="Go to source code">registrar</a>( )</code>
+
+		<div class="description short">
+			
+<p>Registra en el array $_SESSION la URL actual y la anterior y la candidata
+para el botón volver o cancelar</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registra en el array $_SESSION la URL actual y la anterior y la candidata
+para el botón volver o cancelar</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="btn_volver" id="_btn_volver">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_btn_volver">#</a>
+		<code><a href="source-class-core.URL.html#238-247" title="Go to source code">btn_volver</a>( )</code>
+
+		<div class="description short">
+			
+<p>Devuelve una URL que sea recargable, es decir, que no sea formulario ni
+validación de formularo</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Devuelve una URL que sea recargable, es decir, que no sea formulario ni
+validación de formularo</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>URL<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="url_btn_volver" id="_url_btn_volver">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_url_btn_volver">#</a>
+		<code><a href="source-class-core.URL.html#249-258" title="Go to source code">url_btn_volver</a>( )</code>
+
+		<div class="description short">
+			
+<p>Devuelve una URL que sea recargable, es decir, que no sea formulario ni
+validación de formularo</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Devuelve una URL que sea recargable, es decir, que no sea formulario ni
+validación de formularo</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>URL<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

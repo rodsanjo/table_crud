@@ -41,7 +41,7 @@ class Aplicacion extends \core\Clase_Base {
 		
 			
 		// Reconocer el usuario que ha iniciado la sesión de trabajo o que continúa dentro de una sesión de trabajo.
-		\core\Usuario::iniciar();
+		//\core\Usuario::iniciar();
 				
 		// Los permisos los usamos si trabajamos con la ACL (Access Control List) para definir los permisos de los usuarios
 		// \core\Permisos::iniciar();

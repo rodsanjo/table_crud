@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Interface core\sgbd\SQL_interface | table_crud</title>
+
+	<script type="text/javascript" src="resources/combined.js?3715972085"></script>
+	<script type="text/javascript" src="elementlist.js?2259641373"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-controladores.html">controladores</a>
+						</li>
+				<li class="active"><a href="namespace-core.html">core<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-core.sgbd.html">sgbd</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-modelos.html">modelos</a>
+						</li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-core.sgbd.bd.html">bd</a></li>
+				<li><a href="class-core.sgbd.mysqli.html">mysqli</a></li>
+				<li><a href="class-core.sgbd.SQL_abstract.html">SQL_abstract</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-core.sgbd.SQL_interface.html">SQL_interface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-core.sgbd.html" title="Summary of core\sgbd"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface SQL_interface</h1>
+
+
+	<div class="description">
+	
+<p>Esta clase a se debe extender por el programador para construir la clase que
+intercambie datos con el SGBD elegido (mysql, db2, oracle, etc).</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-core.sgbd.mysqli.html">core\sgbd\mysqli</a>
+	</div>
+
+	<div>
+		<h4>Indirect known implementers</h4>
+			<a href="class-core.sgbd.bd.html">core\sgbd\bd</a>, 
+			<a href="class-modelos.Datos_SQL.html">modelos\Datos_SQL</a>, 
+			<a href="class-modelos.Modelo_SQL.html">modelos\Modelo_SQL</a>
+	</div>
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-core.html">core</a>\<a href="namespace-core.sgbd.html">sgbd</a><br>
+		
+
+		<b>Located at</b> <a href="source-class-core.sgbd.SQL_interface.html#5-239" title="Go to source code">app/core/sgbd/sql_interface.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="connect" id="_connect">
+
+		<td class="attributes"><code>
+			 public static
+			false|resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connect">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#47-54" title="Go to source code">connect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Inicia una conexión con el servidor de bases de datos, cuyos parámetros de
+configuración están en \core\configuracion.php<br />
+También debe cargar el la propiedad self::$db_name self::$prefix_ el valor del
+prefijo usado para los elementos guardados en la base de datos.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inicia una conexión con el servidor de bases de datos, cuyos parámetros de
+configuración están en \core\configuracion.php<br />
+También debe cargar el la propiedad self::$db_name self::$prefix_ el valor del
+prefijo usado para los elementos guardados en la base de datos.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>false|resource</code><br>Devuelve false si fallo y un objeto si éxito. El retorno deverá quedar
+guardado en la propiedad self::$connexion<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disconnect" id="_disconnect">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disconnect">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#57-62" title="Go to source code">disconnect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Cierra la conexión con el SGBD.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cierra la conexión con el SGBD.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>Devuelve false si fallo y true si éxito.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public static
+			fasle|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#65-73" title="Go to source code">execute</a>( <span>string <var>$consulta</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Ejecuta la consulta SQL que se pasa en el parámetro $consulta. Se ejecuta
+sobre la conexión iniciada con el SGBD. Devuelve false si fallo, true si éxito
+para consultas que no devuelven filas, y array conteniendo un array por cada
+fila para las consultas que devuelven filas.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ejecuta la consulta SQL que se pasa en el parámetro $consulta. Se ejecuta
+sobre la conexión iniciada con el SGBD. Devuelve false si fallo, true si éxito
+para consultas que no devuelven filas, y array conteniendo un array por cada
+fila para las consultas que devuelven filas.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$consulta</var></dt>
+					<dd><code>string</code><br>$consulta Cadena con la consulta SQL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>fasle|array</code><br>false|array()|array(0=&gt;array('col1'=&gt;val1, 'col2'=&gt;val2, ...),
+1=&gt;array('col1'=&gt;val1, 'col2'=&gt;val2, ...), ...) Devuleve false si hubo
+un error de ejecución de la consulta. Devuelve array vacío si no hay
+resultado.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_rows" id="_get_rows">
+
+		<td class="attributes"><code>
+			 public static
+			fasle|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_rows">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#76-84" title="Go to source code">get_rows</a>( <span>string <var>$consulta</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Ejecuta la consulta que se pase como parámetro o si no se pasa, se supone
+que se ha ejecutado la consulta previamente. Recupera el resultado de la
+ejecución de la consulta de self::$resultado y a partír de ahí obtiene un
+array de índice entero, conteniendo en cada entrada otro array asociativo con
+los datos de cada una fila de las filas recuperadas por la ejecución de la
+consulta. Es solo válido para consultas que devuelvan filas.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Ejecuta la consulta que se pase como parámetro o si no se pasa, se supone
+que se ha ejecutado la consulta previamente. Recupera el resultado de la
+ejecución de la consulta de self::$resultado y a partír de ahí obtiene un
+array de índice entero, conteniendo en cada entrada otro array asociativo con
+los datos de cada una fila de las filas recuperadas por la ejecución de la
+consulta. Es solo válido para consultas que devuelvan filas.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$consulta</var></dt>
+					<dd><code>string</code><br>$consulta Cadena con la consulta SQL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>fasle|array</code><br>array()|array(0=&gt;array('col1'=&gt;val1, 'col2'=&gt;val2, ...),
+1=&gt;array('col1'=&gt;val1, 'col2'=&gt;val2, ...), ...) Devuleve false si hubo
+un error de ejecución de la consulta. Devuelve array vacío si no hay
+resultado.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="select" id="_select">
+
+		<td class="attributes"><code>
+			 public static
+			fasle|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_select">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#87-112" title="Go to source code">select</a>( <span>array <var>$clausulas</var> = <span class="php-keyword1">array</span>( <span class="php-quote">'columnas'</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">'where'</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">'group_by'</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">'having'</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">'order_by'</span> =&gt; <span class="php-quote">''</span> )</span>, <span>string <var>$tabla</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+		<div class="description short">
+			
+<p>Recupera filas de $tabla. Si $clausulas['where'] no se aporta o es una cadena
+vacía se recuperan todas las filas.<br />
+Si $clausulas['columnas'] no se aporta o es una cadena vacía se recuperan todas
+las columnas.<br />
+Si $tabla no se aporta se toma self::$tabla.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Recupera filas de $tabla. Si $clausulas['where'] no se aporta o es una cadena
+vacía se recuperan todas las filas.<br />
+Si $clausulas['columnas'] no se aporta o es una cadena vacía se recuperan todas
+las columnas.<br />
+Si $tabla no se aporta se toma self::$tabla.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clausulas</var></dt>
+					<dd><code>array</code><br>$clausulas array( 'columnas' =&gt; '', 'where' =&gt; '', 'group_by' =&gt; '',
+'having' =&gt; '', 'order_by' =&gt; '' )</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>string</code><br>$tabla Si no se aporta se usa el valor de self::$tabla</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>fasle|array</code><br>array()|array(0=&gt;array('col1'=&gt;val1, 'col2'=&gt;val2, ...),
+1=&gt;array('col1'=&gt;val1, 'col2'=&gt;val2, ...), ...) Devuleve false si hubo
+un error de ejecución de la consulta. Devuelve array vacío si no hay
+resultado.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_prefix_tabla" id="_get_prefix_tabla">
+
+		<td class="attributes"><code>
+			 public static
+			string|Exeption
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_prefix_tabla">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#114-125" title="Go to source code">get_prefix_tabla</a>( <span>string <var>$table_name</var></span>, <span>mixed <var>$db_name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Devuelve el nombre de la tabla precedido del prefijo (definido en
+\core\configuracion.php) si lo hubiera y del nombre de la base de datos.
+Ejemplos de retorno: get_prefix_tabla("table_name") =&gt;
+bd_name.prefix_table_name get_prefix_tabla("table_name") =&gt;
+bd_name_conf.prefix_table_name get_prefix_tabla("table_name", "bd_name") =&gt;
+bd_name.prefix_table_name get_prefix_tabla("bd_other.table_name", "bd_name")
+=&gt; bd_other.prefix_table_name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Devuelve el nombre de la tabla precedido del prefijo (definido en
+\core\configuracion.php) si lo hubiera y del nombre de la base de datos.
+Ejemplos de retorno: get_prefix_tabla("table_name") =&gt;
+bd_name.prefix_table_name get_prefix_tabla("table_name") =&gt;
+bd_name_conf.prefix_table_name get_prefix_tabla("table_name", "bd_name") =&gt;
+bd_name.prefix_table_name get_prefix_tabla("bd_other.table_name", "bd_name")
+=&gt; bd_other.prefix_table_name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table_name</var></dt>
+					<dd><code>string</code><br>$tabla</dd>
+					<dt><var>$db_name</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|Exeption</code><br>Ejemplo: "bd_name.prefix_table_name"<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_table_name" id="_set_table_name">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_table_name">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#128-135" title="Go to source code">set_table_name</a>( <span>type <var>$table_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Define el nombre de la tabla que se utilizará por defecto, dentro de la base
+de datos usada por defecto. No debe incluir ni el nombre de la base de datos ni
+el prefijo. Ejemplo: set_table_name("usuarios");</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define el nombre de la tabla que se utilizará por defecto, dentro de la base
+de datos usada por defecto. No debe incluir ni el nombre de la base de datos ni
+el prefijo. Ejemplo: set_table_name("usuarios");</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table_name</var></dt>
+					<dd><code>type</code><br>$table_name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert_row" id="_insert_row">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert_row">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#137-144" title="Go to source code">insert_row</a>( <span>array <var>&amp; $fila</var></span>, <span>string <var>$tabla</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inserta la fila cuyos datos están contenidos en las entradas del array
+$fila. Los datos que no se aporten deberán poderse sustituir por null o valores
+por defecto en la tabla.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inserta la fila cuyos datos están contenidos en las entradas del array
+$fila. Los datos que no se aporten deberán poderse sustituir por null o valores
+por defecto en la tabla.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fila</var></dt>
+					<dd><code>array</code><br>$fila Array asociativo con las columnas de la fila a modifiar.</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>string</code><br>$tabla Tabla en la que insertar</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True si éxito, false si error de sintáxis.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="_insert">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insert">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#148-155" title="Go to source code">insert</a>( <span>array <var>&amp; $fila</var></span>, <span>string <var>$tabla</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inserta la fila cuyos datos están contenidos en las entradas del array
+$fila. Los datos que no se aporten deberán poderse sustituir por null o valores
+por defecto en la tabla.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inserta la fila cuyos datos están contenidos en las entradas del array
+$fila. Los datos que no se aporten deberán poderse sustituir por null o valores
+por defecto en la tabla.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fila</var></dt>
+					<dd><code>array</code><br>$fila Array asociativo con las columnas de la fila a modifiar.</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>string</code><br>$tabla Tabla en la que insertar</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True si éxito, false si error de sintáxis.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update_row" id="_update_row">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update_row">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#158-164" title="Go to source code">update_row</a>( <span>array <var>&amp; $fila</var></span>, <span>mixed <var>$tabla</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Modifica la fila cuyo id está contenido en $fila['id'] con los valores
+contenidos en el resto de entradas de $fila</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Modifica la fila cuyo id está contenido en $fila['id'] con los valores
+contenidos en el resto de entradas de $fila</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fila</var></dt>
+					<dd><code>array</code><br>$fila Array asociativo con las columnas de la fila a modifiar.</dd>
+					<dt><var>$tabla</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True si éxito, false si error de sintáxis.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete_row" id="_delete_row">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete_row">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#167-174" title="Go to source code">delete_row</a>( <span>array <var>&amp; $fila</var></span>, <span>string <var>$tabla</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Borrar la fila de la tabla cuyo id es el valor de la entrada $fila['id']. Si
+la entrada no se aporta o no tiene valor se genera una execpción.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Borrar la fila de la tabla cuyo id es el valor de la entrada $fila['id']. Si
+la entrada no se aporta o no tiene valor se genera una execpción.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fila</var></dt>
+					<dd><code>array</code><br>$fila Array asociativo con la entrada id</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>string</code><br>$tabla Nombre de la tabla</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True si éxito en ejecución, False si error de sintáxis.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#177-193" title="Go to source code">delete</a>( <span>array <var>$clausulas</var> = <span class="php-keyword1">array</span>( <span class="php-quote">'where'</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">'order_by'</span> =&gt; <span class="php-quote">''</span>, )</span>, <span>string <var>$tabla</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+		<div class="description short">
+			
+<p>Borra filas que cumplan las condiciones pasadas en la entrada where del array
+$clausulas. ¡Si no se pasa la entrada $clausulas['where'] o si es una cadena
+vacía, se borra toda la tabla!</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Borra filas que cumplan las condiciones pasadas en la entrada where del array
+$clausulas. ¡Si no se pasa la entrada $clausulas['where'] o si es una cadena
+vacía, se borra toda la tabla!</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clausulas</var></dt>
+					<dd><code>array</code><br>$clausulas Ejemplo de contenido: array( 'where' =&gt; ' col2 = val1 and col2 =
+val2 ', 'order_by' =&gt; ' col1, col2, ...')</dd>
+					<dt><var>$tabla</var></dt>
+					<dd><code>string</code><br>$tabla Nombre de la tabla. Si no aporta se usa la tabla definida en self::$tabla</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True si éxito False si fallo de sintáxis.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="last_insert_id" id="_last_insert_id">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_last_insert_id">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#197-202" title="Go to source code">last_insert_id</a>( )</code>
+
+		<div class="description short">
+			
+<p>Devuelve el último valor generado por una cláusula auto increment.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Devuelve el último valor generado por una cláusula auto increment.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>Devuelve el último valor generado por una cláusula auto_increment<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="last_query" id="_last_query">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_last_query">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#205-210" title="Go to source code">last_query</a>( )</code>
+
+		<div class="description short">
+			
+<p>Devuelve el código sql de la última consulta ejecutada.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Devuelve el código sql de la última consulta ejecutada.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>código sql de la última consulta ejecutada<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start_transacction" id="_start_transacction">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start_transacction">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#214-217" title="Go to source code">start_transacction</a>( )</code>
+
+		<div class="description short">
+			
+<p>Inicia una transacción</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inicia una transacción</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="commit_transacction" id="_commit_transacction">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_commit_transacction">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#220-223" title="Go to source code">commit_transacction</a>( )</code>
+
+		<div class="description short">
+			
+<p>Confirma una transacción</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Confirma una transacción</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rollback_transacction" id="_rollback_transacction">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_rollback_transacction">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#226-229" title="Go to source code">rollback_transacction</a>( )</code>
+
+		<div class="description short">
+			
+<p>Deshace una transacción</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deshace una transacción</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape_string" id="_escape_string">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape_string">#</a>
+		<code><a href="source-class-core.sgbd.SQL_interface.html#233-237" title="Go to source code">escape_string</a>( <span>type <var>$cadena</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retorna la cadena con los caracteres especiales definidos en el sgbd
+escapados</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retorna la cadena con los caracteres especiales definidos en el sgbd
+escapados</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cadena</var></dt>
+					<dd><code>type</code><br>$cadena Cadena con los caracteres especiales definidos en el sgbd escapados</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		table_crud API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
