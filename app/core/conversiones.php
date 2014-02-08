@@ -150,7 +150,7 @@ class Conversiones {
          * Convierte una fecha en formaro europeo (dd-mm-aaaa) al formato usado por mysql
          * http://php.net/manual/es/datetime.createfromformat.php
          * 
-         * @author Jorge Rodríguez Sanz
+         * @author Jorge Rodríguez Sanz <jergo23@gmail.com>
          * @param date $fecha
          * @return date
          */
@@ -186,7 +186,7 @@ class Conversiones {
          * Sirve para sustituir indistintamente el punto o coma usado por el usuario
          * como separador de decimales a punto que utiliza MySQL
          * 
-         * @author Jorge Rodríguez Sanz 
+         * @author Jorge Rodríguez Sanz <jergo23@gmail.com>
          * @param float $decimal
          * @return string
          */
