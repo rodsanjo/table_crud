@@ -166,8 +166,7 @@ class Conversiones {
         
         /**
          * Convierte una fecha en formaro MySQL (YYYY-mm-dd) al formato europeo
-         * http://php.net/manual/es/datetime.createfromformat.php
-         * 
+         * @link http://php.net/manual/es/datetime.createfromformat.php 
          * @author Jorge Rodríguez Sanz
          * @param date $fecha
          * @return date

@@ -367,6 +367,7 @@ class Validaciones  {
 
     /**
      * Cadena representa una fecha, con el formato dd/mm/aaaa o aaaa-mm-dd
+     * @author Jorge Rodríguez Sanz<jergo23@gmail.com>
      * @param type $cadena
      * @return boolean
      */

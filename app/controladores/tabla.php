@@ -269,7 +269,7 @@ class Tabla extends \core\Controlador {
             }
         }else{
             $param['masa_atomica']=  \core\Conversiones::decimal_punto_a_coma($param['masa_atomica']);            
-            if(preg_match("/MSIE/", $_SERVER['HTTP_USER_AGENT'])){
+            if(preg_match("/MSIE|Firefox|Trident/", $_SERVER['HTTP_USER_AGENT'])){
                 $param['fecha_salida']=  \core\Conversiones::fecha_mysql_a_es($param['fecha_salida']);
             }
             //fecha_entrada es readOnly en los formularios, por lo que no es necesario realizar la conversión.
